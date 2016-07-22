@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.Service", "FeedBackRepositoryPattern.Service\FeedBackRepositoryPattern.Service.csproj", "{FFEBBD1A-2C66-4E6B-9496-95A8F2FB7DF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.WebApplication", "FeedBackRepositoryPattern.WebApplication\FeedBackRepositoryPattern.WebApplication.csproj", "{6062A22E-A3F4-4EC7-95E8-D2279C825010}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FFEBBD1A-2C66-4E6B-9496-95A8F2FB7DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFEBBD1A-2C66-4E6B-9496-95A8F2FB7DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFEBBD1A-2C66-4E6B-9496-95A8F2FB7DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6062A22E-A3F4-4EC7-95E8-D2279C825010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6062A22E-A3F4-4EC7-95E8-D2279C825010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6062A22E-A3F4-4EC7-95E8-D2279C825010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6062A22E-A3F4-4EC7-95E8-D2279C825010}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

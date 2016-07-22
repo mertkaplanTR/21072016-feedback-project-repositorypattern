@@ -19,8 +19,17 @@ namespace FeedBackRepositoryPattern.WebApplication
         protected void AdminAddButton_Click(object sender, EventArgs e)
         {
             AdminService admin = new AdminService();
+            AdminAddDTO obj = new AdminAddDTO();
+            
+            obj.Username = TextBox1.Text;
+            obj.Password = TextBox2.Text;
+            obj.EmailAddress = TextBox3.Text;
+            obj.isActive = true;
+            obj.AdminRole = 1;
+            obj.CreatedDate = DateTime.Now;
+            obj.ModifiedDate = DateTime.Now;
             //admin.AddAdminServiceFunction("ne turden obj yaratıp buraya gondermeli");
-
+            admin.AddAdminServiceFunction(obj);
         }
     }
 }

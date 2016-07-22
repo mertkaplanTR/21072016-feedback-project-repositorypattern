@@ -10,21 +10,22 @@ namespace FeedBackRepositoryPattern.Repository
     {
         private static feedbackdatabaseEntities datacontex;
 
-        public feedbackdatabaseEntities DataContex
+        protected virtual feedbackdatabaseEntities DataContex
         {
             get
             {
-                if (DataContex==null)
+                if (datacontex==null)
                 {
                     datacontex = new feedbackdatabaseEntities();
                 }
                 return datacontex;
             }
             set
-            {
-                datacontex = value;
-            }
+            { datacontex = new feedbackdatabaseEntities(); }
         }
+
+
+
 
         public IList<T> GetList()
         {

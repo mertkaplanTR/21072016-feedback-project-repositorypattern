@@ -1,1 +1,14 @@
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\obj\Debug\FeedBackRepositoryPattern.Service.csprojResolveAssemblyReference.cache
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.Service.dll.config
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.Service.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.Service.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\EntityFramework.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.DTO.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.ORM.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.Repository.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.DTO.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.ORM.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\FeedBackRepositoryPattern.Repository.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\bin\Debug\EntityFramework.xml
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\obj\Debug\FeedBackRepositoryPattern.Service.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Service\obj\Debug\FeedBackRepositoryPattern.Service.pdb

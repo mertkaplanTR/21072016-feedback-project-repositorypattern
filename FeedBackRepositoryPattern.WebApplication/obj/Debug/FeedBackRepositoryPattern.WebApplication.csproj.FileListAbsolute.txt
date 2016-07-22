@@ -1,0 +1,16 @@
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.WebApplication.dll.config
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.WebApplication.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.WebApplication.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\EntityFramework.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.DTO.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.Service.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.Repository.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.ORM.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.DTO.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.Service.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\EntityFramework.xml
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.Repository.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.ORM.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\obj\Debug\FeedBackRepositoryPattern.WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\obj\Debug\FeedBackRepositoryPattern.WebApplication.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\obj\Debug\FeedBackRepositoryPattern.WebApplication.pdb
