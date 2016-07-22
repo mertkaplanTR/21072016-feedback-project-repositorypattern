@@ -45,7 +45,7 @@ namespace FeedBackRepositoryPattern.Repository
             DataContex = new feedbackdatabaseEntities(); //refresh
         }
 
-        public void Refresh()
+        public void UpdateSomething(T entity)
         {
             DataContex.SaveChanges();
             DataContex = new feedbackdatabaseEntities();

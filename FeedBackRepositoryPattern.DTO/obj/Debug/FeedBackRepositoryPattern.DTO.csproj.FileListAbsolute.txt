@@ -1,0 +1,5 @@
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\FeedBackRepositoryPattern.DTO.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\FeedBackRepositoryPattern.DTO.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\obj\Debug\FeedBackRepositoryPattern.DTO.csprojResolveAssemblyReference.cache
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\obj\Debug\FeedBackRepositoryPattern.DTO.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\obj\Debug\FeedBackRepositoryPattern.DTO.pdb

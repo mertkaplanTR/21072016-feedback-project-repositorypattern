@@ -5,12 +5,11 @@ using System.Text;
 using FeedBackRepositoryPattern.ORM;
 namespace FeedBackRepositoryPattern.Repository
 {
-    public class ReporterRepository:RepositoryBase<Reporter>
+    public class AdminRepository : RepositoryBase<Admin>
     {
-        public void AddReport(Reporter p1, Reporter p2, Reporter p3, Reporter p4, Reporter p5)
+        public void MyAdminFunction()
         {
-          
-
+            
         }
     }
 }

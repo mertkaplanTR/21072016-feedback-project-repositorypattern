@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="feedbackdatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="AdminRole" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Programmers">
+    <Key>
+      <PropertyRef Name="ProgrammerID" />
+    </Key>
+    <Property Name="ProgrammerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProgrammerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProgrammerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProgrammerProjects" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Projects" Relationship="Self.Project_Programmer" FromRole="Programmers" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectExplanation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Programmers" Relationship="Self.Project_Programmer" FromRole="Projects" ToRole="Programmers" />
+    <NavigationProperty Name="ReportInformation" Relationship="Self.Report_Project" FromRole="Projects" ToRole="ReportInformation" />
+  </EntityType>
+  <EntityType Name="Reporter">
+    <Key>
+      <PropertyRef Name="ReporterID" />
+    </Key>
+    <Property Name="ReporterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ReportInformation" Relationship="Self.Reporter_Report" FromRole="Reporter" ToRole="ReportInformation" />
+  </EntityType>
+  <EntityType Name="ReportInformation">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingToProgrammer" Type="Int32" />
+    <Property Name="SuccessfullySendedReport" Type="Boolean" />
+    <Property Name="ReportDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Projects" Relationship="Self.Report_Project" FromRole="ReportInformation" ToRole="Projects" />
+    <NavigationProperty Name="Reporter" Relationship="Self.Reporter_Report" FromRole="ReportInformation" ToRole="Reporter" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="Project_Programmer">
+    <End Role="Programmers" Type="Self.Programmers" Multiplicity="*" />
+    <End Role="Projects" Type="Self.Projects" Multiplicity="*" />
+  </Association>
+  <Association Name="Report_Project">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="*" />
+    <End Role="ReportInformation" Type="Self.ReportInformation" Multiplicity="*" />
+  </Association>
+  <Association Name="Reporter_Report">
+    <End Role="Reporter" Type="Self.Reporter" Multiplicity="*" />
+    <End Role="ReportInformation" Type="Self.ReportInformation" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="feedbackdatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Programmers" EntityType="Self.Programmers" />
+    <EntitySet Name="Projects" EntityType="Self.Projects" />
+    <EntitySet Name="Reporter" EntityType="Self.Reporter" />
+    <EntitySet Name="ReportInformation" EntityType="Self.ReportInformation" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="Project_Programmer" Association="Self.Project_Programmer">
+      <End Role="Programmers" EntitySet="Programmers" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="Report_Project" Association="Self.Report_Project">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ReportInformation" EntitySet="ReportInformation" />
+    </AssociationSet>
+    <AssociationSet Name="Reporter_Report" Association="Self.Reporter_Report">
+      <End Role="Reporter" EntitySet="Reporter" />
+      <End Role="ReportInformation" EntitySet="ReportInformation" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(feedbackdatabaseModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(feedbackdatabaseModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
