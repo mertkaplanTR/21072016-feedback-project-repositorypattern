@@ -34,6 +34,7 @@ namespace FeedBackRepositoryPattern.WebApplication
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
+
             AdminService admin = new AdminService();
             AdminDeleteDTO obj = new AdminDeleteDTO();
             obj.UserID = Convert.ToInt32(TextBox4.Text);
