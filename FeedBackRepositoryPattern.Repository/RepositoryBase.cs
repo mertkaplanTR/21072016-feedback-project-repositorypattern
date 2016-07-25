@@ -21,7 +21,7 @@ namespace FeedBackRepositoryPattern.Repository
                 return datacontex;
             }
             set
-            { datacontex = new feedbackdatabaseEntities(); }
+            { datacontex = value; }
         }
 
 
