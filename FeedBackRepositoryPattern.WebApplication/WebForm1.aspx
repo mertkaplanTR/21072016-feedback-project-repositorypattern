@@ -12,6 +12,7 @@
     
         Admin Add<br />
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;
         <br />
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         <br />
@@ -27,6 +28,10 @@
         <br />
         <br />
         <asp:Button ID="AdminAddButton" runat="server" OnClick="AdminAddButton_Click" Text="Add" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="DeleteButton" runat="server" OnClick="DeleteButton_Click" Text="Delete" />
+    &nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
     </div>
     </form>
 </body>

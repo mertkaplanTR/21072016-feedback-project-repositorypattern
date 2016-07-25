@@ -46,32 +46,20 @@ namespace FeedBackRepositoryPattern.Service
         public void DeleteAdminServiceFunction(AdminDeleteDTO entity)
         {
             //repository'e gönderilecek olan parametre
-            Admin admin = new Admin 
-            {
-                UserID=entity.UserID,
-                Username=entity.Username,
-                Password=entity.Password,
-                EmailAddress=entity.EmailAddress,
-                isActive=entity.isActive,
-                AdminRole=entity.AdminRole,
-                CreatedDate=entity.CreatedDate,
-                ModifiedDate=entity.ModifiedDate
-         
-            };
+            Admin admin = datacontex.GetAdminFunction(entity.UserID);
             datacontex.DeleteSomething(admin);
         }
 
         public void UpdateAdminServiceFunction(AdminUpdateDTO entity)
         {
-            Admin admin = new Admin
-            {
-                Username = entity.Username,
-                Password = entity.Password,
-                EmailAddress = entity.EmailAddress,
-                isActive = entity.isActive,
-                AdminRole = entity.AdminRole,
-                ModifiedDate = entity.ModifiedDate
-            };
+            Admin admin = datacontex.GetAdminFunction(entity.UserID);
+
+            admin.Username = entity.Username;
+            admin.Password = entity.Password;
+            admin.EmailAddress = entity.EmailAddress;
+            admin.isActive = entity.isActive;
+            admin.AdminRole = entity.AdminRole;
+            admin.ModifiedDate = entity.ModifiedDate;
             datacontex.UpdateSomething(admin);
         }
     }

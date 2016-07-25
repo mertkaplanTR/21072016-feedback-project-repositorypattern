@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="AdminRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporterRepository.cs" />
     <Compile Include="RepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>

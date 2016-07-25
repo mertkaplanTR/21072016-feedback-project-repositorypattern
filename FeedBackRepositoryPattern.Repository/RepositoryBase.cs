@@ -24,9 +24,6 @@ namespace FeedBackRepositoryPattern.Repository
             { datacontex = value; }
         }
 
-
-
-
         public IList<T> GetList()
         {
             return DataContex.Set<T>().ToList();

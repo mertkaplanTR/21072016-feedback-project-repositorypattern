@@ -31,5 +31,28 @@ namespace FeedBackRepositoryPattern.WebApplication
             //admin.AddAdminServiceFunction("ne turden obj yaratıp buraya gondermeli");
             admin.AddAdminServiceFunction(obj);
         }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            AdminService admin = new AdminService();
+            AdminDeleteDTO obj = new AdminDeleteDTO();
+            obj.UserID = Convert.ToInt32(TextBox4.Text);
+            admin.DeleteAdminServiceFunction(obj);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            AdminService admin = new AdminService();
+            AdminUpdateDTO obj2 = new AdminUpdateDTO();
+            obj2.UserID = Convert.ToInt32(TextBox4.Text);
+            obj2.Username = "mert";
+            obj2.Password = "pass";
+            obj2.EmailAddress = "email";
+            admin.UpdateAdminServiceFunction(obj2);
+        }
     }
+
+
+
+
 }
