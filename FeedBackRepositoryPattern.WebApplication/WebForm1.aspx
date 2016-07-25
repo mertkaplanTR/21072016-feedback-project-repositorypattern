@@ -11,27 +11,38 @@
     <div>
     
         Admin Add<br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        txtAddUsername:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtAddUsername" runat="server"></asp:TextBox>
         &nbsp;&nbsp;
         <br />
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        txtAddPassword:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAddPassword" runat="server"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        txtAddEmailaddress:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAddEmailaddress" runat="server"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        txtIsActive:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:DropDownList ID="isActiveDropDown" runat="server" Height="16px" Width="167px">
+            <asp:ListItem Value="active">Active</asp:ListItem>
+            <asp:ListItem Value="deactive">Deactive</asp:ListItem>
+        </asp:DropDownList>
         <br />
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        txtAdminRole:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtAddAdminRole" runat="server"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+        CreatedDate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtAddCreatedDate" runat="server"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        ModifiedDate:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtAddModifiedDate" runat="server"></asp:TextBox>
+        <br />
+        ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtAddID" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="AdminAddButton" runat="server" OnClick="AdminAddButton_Click" Text="Add" />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="DeleteButton" runat="server" OnClick="DeleteButton_Click" Text="Delete" />
     &nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <asp:Button ID="UpdateButtton" runat="server" OnClick="UpdateButton_Click" Text="Update" />
     </div>
     </form>
 </body>

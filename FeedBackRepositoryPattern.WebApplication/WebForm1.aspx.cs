@@ -21,14 +21,13 @@ namespace FeedBackRepositoryPattern.WebApplication
             AdminService admin = new AdminService();
             AdminAddDTO obj = new AdminAddDTO();
             
-            obj.Username = TextBox1.Text;
-            obj.Password = TextBox2.Text;
-            obj.EmailAddress = TextBox3.Text;
+            obj.Username = txtAddUsername.Text;
+            obj.Password = txtAddPassword.Text;
+            obj.EmailAddress = txtAddEmailaddress.Text;
             obj.isActive = true;
             obj.AdminRole = 1;
             obj.CreatedDate = DateTime.Now;
             obj.ModifiedDate = DateTime.Now;
-            //admin.AddAdminServiceFunction("ne turden obj yaratıp buraya gondermeli");
             admin.AddAdminServiceFunction(obj);
         }
 
@@ -37,20 +36,32 @@ namespace FeedBackRepositoryPattern.WebApplication
 
             AdminService admin = new AdminService();
             AdminDeleteDTO obj = new AdminDeleteDTO();
-            obj.UserID = Convert.ToInt32(TextBox4.Text);
+            obj.UserID = Convert.ToInt32(txtAddID.Text);
             admin.DeleteAdminServiceFunction(obj);
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void UpdateButton_Click(object sender, EventArgs e)
         {
             AdminService admin = new AdminService();
             AdminUpdateDTO obj2 = new AdminUpdateDTO();
-            obj2.UserID = Convert.ToInt32(TextBox4.Text);
-            obj2.Username = "mert";
-            obj2.Password = "pass";
-            obj2.EmailAddress = "email";
+            obj2.UserID = Convert.ToInt32(txtAddID.Text);
+            obj2.Username = txtAddUsername.Text;
+            obj2.Password = txtAddPassword.Text;
+            obj2.EmailAddress = txtAddEmailaddress.Text;
+            if (isActiveDropDown.Text == "active")
+            {
+                obj2.isActive = true;
+            }
+            else
+                obj2.isActive = false;
+           // obj2.isActive = Convert.ToBoolean(txtAddIsActive);
+            obj2.AdminRole = Convert.ToInt32(txtAddAdminRole.Text);
+            //obj2.CreatedDate = DateTime.Now;
+            obj2.ModifiedDate = DateTime.Now;
             admin.UpdateAdminServiceFunction(obj2);
         }
+
+ 
     }
 
 
