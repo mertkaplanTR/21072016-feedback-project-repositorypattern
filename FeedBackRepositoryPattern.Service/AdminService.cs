@@ -27,6 +27,8 @@ namespace FeedBackRepositoryPattern.Service
                     ModifiedDate = Convert.ToDateTime(x.ModifiedDate),
                 }).ToList();
         }
+
+        
         
         public void AddAdminServiceFunction(AdminAddDTO entity)
         {

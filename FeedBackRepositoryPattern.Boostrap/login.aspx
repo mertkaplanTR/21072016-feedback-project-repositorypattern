@@ -97,26 +97,32 @@
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-				                    <form role="form" action="" method="post" class="registration-form">
+				                   
 				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-first-name">First name</label>
-				                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+				                    		<label class="sr-only" for="form-first-name">Full Name Label</label>
+                                            <asp:TextBox ID="txtFullName" runat="server" placeholder="Full Name" CssClass="form-first-name form-control" type="text" required></asp:TextBox>
 				                        </div>
 				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-last-name">Last name</label>
-				                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+				                        	<label class="sr-only" for="form-last-name">Company Name Label</label>
+				                        	<asp:TextBox ID="txtCompany" runat="server" placeholder="Company Name" CssClass="form-first-name form-control" type="text" required></asp:TextBox>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                            <asp:TextBox ID="txtEmail" type="email" runat="server" placeholder="Email Address" CssClass="form-email form-control" required></asp:TextBox>
 				                        </div>
+
+                                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+                                            <asp:DropDownList ID="ddlProjects" runat="server" CssClass="form-email form-control" placeholder="Proje Seçiniz"></asp:DropDownList>
+				                        </div>
+
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
 				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
 				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
 				                        </div>
-				                        <button type="submit" class="btn">Sign me up!</button>
-				                    </form>
+                                        <asp:Button ID="btnSendReport" runat="server" CssClass="btn btn-primary" Text="Gönder" />
+				                
 			                    </div>
                         	</div>
                         	
