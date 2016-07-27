@@ -57,6 +57,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FeedBackRepositoryPattern.ORM\FeedBackRepositoryPattern.ORM.csproj">
+      <Project>{e4c3433f-0895-47c0-8980-49de3c67a3ae}</Project>
+      <Name>FeedBackRepositoryPattern.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

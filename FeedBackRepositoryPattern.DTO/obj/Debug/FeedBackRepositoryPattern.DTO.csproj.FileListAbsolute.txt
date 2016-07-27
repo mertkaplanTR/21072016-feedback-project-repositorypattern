@@ -6,3 +6,5 @@ C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\FeedBackRepositoryPattern.DTO.dll.config
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\EntityFramework.dll
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\EntityFramework.xml
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\FeedBackRepositoryPattern.ORM.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.DTO\bin\Debug\FeedBackRepositoryPattern.ORM.pdb

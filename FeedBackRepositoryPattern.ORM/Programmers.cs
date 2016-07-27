@@ -22,9 +22,8 @@ namespace FeedBackRepositoryPattern.ORM
         public int ProgrammerID { get; set; }
         public string ProgrammerName { get; set; }
         public string ProgrammerEmail { get; set; }
-        public string ProgrammerProjects { get; set; }
-        public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<System.DateTime> ModifiedDate { get; set; }
     
         public virtual ICollection<Projects> Projects { get; set; }
     }

@@ -18,7 +18,7 @@ namespace FeedBackRepositoryPattern.ORM
         public string Username { get; set; }
         public string Password { get; set; }
         public string EmailAddress { get; set; }
-        public Nullable<bool> isActive { get; set; }
+        public bool isActive { get; set; }
         public Nullable<int> AdminRole { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }

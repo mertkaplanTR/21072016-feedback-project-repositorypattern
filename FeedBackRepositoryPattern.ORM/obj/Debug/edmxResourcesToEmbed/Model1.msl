@@ -21,9 +21,8 @@
           <ScalarProperty Name="ProgrammerID" ColumnName="ProgrammerID" />
           <ScalarProperty Name="ProgrammerName" ColumnName="ProgrammerName" />
           <ScalarProperty Name="ProgrammerEmail" ColumnName="ProgrammerEmail" />
-          <ScalarProperty Name="ProgrammerProjects" ColumnName="ProgrammerProjects" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
           <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -42,23 +41,14 @@
     <EntitySetMapping Name="Reporter">
       <EntityTypeMapping TypeName="feedbackdatabaseModel.Reporter">
         <MappingFragment StoreEntitySet="Reporter">
-          <ScalarProperty Name="ReporterID" ColumnName="ReporterID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="Company" ColumnName="Company" />
           <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
           <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ReportInformation">
-      <EntityTypeMapping TypeName="feedbackdatabaseModel.ReportInformation">
-        <MappingFragment StoreEntitySet="ReportInformation">
-          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
           <ScalarProperty Name="Subject" ColumnName="Subject" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="RegardingToProgrammer" ColumnName="RegardingToProgrammer" />
-          <ScalarProperty Name="SuccessfullySendedReport" ColumnName="SuccessfullySendedReport" />
-          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -73,7 +63,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Project_Programmer" TypeName="feedbackdatabaseModel.Project_Programmer" StoreEntitySet="Project_Programmer">
+    <AssociationSetMapping Name="project_programmer" TypeName="feedbackdatabaseModel.project_programmer" StoreEntitySet="project_programmer">
       <EndProperty Name="Programmers">
         <ScalarProperty Name="ProgrammerID" ColumnName="ProgrammerID" />
       </EndProperty>
@@ -81,45 +71,13 @@
         <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="Report_Project" TypeName="feedbackdatabaseModel.Report_Project" StoreEntitySet="Report_Project">
+    <AssociationSetMapping Name="Project_Report" TypeName="feedbackdatabaseModel.Project_Report" StoreEntitySet="Project_Report">
       <EndProperty Name="Projects">
         <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
       </EndProperty>
-      <EndProperty Name="ReportInformation">
-        <ScalarProperty Name="ReportID" ColumnName="ReportID" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="Reporter_Report" TypeName="feedbackdatabaseModel.Reporter_Report" StoreEntitySet="Reporter_Report">
       <EndProperty Name="Reporter">
-        <ScalarProperty Name="ReporterID" ColumnName="ReporterID" />
-      </EndProperty>
-      <EndProperty Name="ReportInformation">
         <ScalarProperty Name="ReportID" ColumnName="ReportID" />
       </EndProperty>
     </AssociationSetMapping>
-    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="feedbackdatabaseModel.Store.sp_alterdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="feedbackdatabaseModel.Store.sp_creatediagram" />
-    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="feedbackdatabaseModel.Store.sp_dropdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="feedbackdatabaseModel.Store.sp_helpdiagramdefinition">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="feedbackdatabaseModel.sp_helpdiagramdefinition_Result">
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="feedbackdatabaseModel.Store.sp_helpdiagrams">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="feedbackdatabaseModel.sp_helpdiagrams_Result">
-          <ScalarProperty Name="Database" ColumnName="Database" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Owner" ColumnName="Owner" />
-          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="feedbackdatabaseModel.Store.sp_renamediagram" />
-    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="feedbackdatabaseModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

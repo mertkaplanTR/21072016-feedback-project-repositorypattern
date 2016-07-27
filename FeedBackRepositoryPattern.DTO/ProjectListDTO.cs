@@ -13,6 +13,7 @@ namespace FeedBackRepositoryPattern.DTO
         public string ProjectExplanation { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
+
         //image için bul... system.drawing?
     }
 }

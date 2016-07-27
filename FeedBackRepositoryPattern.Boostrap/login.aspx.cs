@@ -21,5 +21,10 @@ namespace FeedBackRepositoryPattern.Boostrap
             ddlProjects.DataBind();
             int x = Convert.ToInt32(ddlProjects.SelectedValue);
         }
+
+        protected void btnSendReport_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

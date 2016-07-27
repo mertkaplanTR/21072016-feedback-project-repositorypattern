@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.ORM", "FeedBackRepositoryPattern.ORM\FeedBackRepositoryPattern.ORM.csproj", "{D29E6CD3-B183-4D2C-ACCB-1B102F72DE79}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.Repository", "FeedBackRepositoryPattern.Repository\FeedBackRepositoryPattern.Repository.csproj", "{E656DEBC-E4E8-483C-96F5-F6AAE53A9636}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.DTO", "FeedBackRepositoryPattern.DTO\FeedBackRepositoryPattern.DTO.csproj", "{D9CA5CEA-B216-4271-ADD2-A03F752BB334}"
@@ -15,16 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.Boostrap", "FeedBackRepositoryPattern.Boostrap\FeedBackRepositoryPattern.Boostrap.csproj", "{AF6D7EB1-4404-40B0-91DB-B9DA7A7E48DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackRepositoryPattern.ORM", "FeedBackRepositoryPattern.ORM\FeedBackRepositoryPattern.ORM.csproj", "{E4C3433F-0895-47C0-8980-49DE3C67A3AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D29E6CD3-B183-4D2C-ACCB-1B102F72DE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D29E6CD3-B183-4D2C-ACCB-1B102F72DE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D29E6CD3-B183-4D2C-ACCB-1B102F72DE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D29E6CD3-B183-4D2C-ACCB-1B102F72DE79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E656DEBC-E4E8-483C-96F5-F6AAE53A9636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E656DEBC-E4E8-483C-96F5-F6AAE53A9636}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E656DEBC-E4E8-483C-96F5-F6AAE53A9636}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{AF6D7EB1-4404-40B0-91DB-B9DA7A7E48DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF6D7EB1-4404-40B0-91DB-B9DA7A7E48DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF6D7EB1-4404-40B0-91DB-B9DA7A7E48DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4C3433F-0895-47C0-8980-49DE3C67A3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C3433F-0895-47C0-8980-49DE3C67A3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C3433F-0895-47C0-8980-49DE3C67A3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C3433F-0895-47C0-8980-49DE3C67A3AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

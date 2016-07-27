@@ -17,7 +17,7 @@ namespace FeedBackRepositoryPattern.ORM
         public Projects()
         {
             this.Programmers = new HashSet<Programmers>();
-            this.ReportInformation = new HashSet<ReportInformation>();
+            this.Reporter = new HashSet<Reporter>();
         }
     
         public int ProjectID { get; set; }
@@ -28,6 +28,6 @@ namespace FeedBackRepositoryPattern.ORM
         public byte[] Image { get; set; }
     
         public virtual ICollection<Programmers> Programmers { get; set; }
-        public virtual ICollection<ReportInformation> ReportInformation { get; set; }
+        public virtual ICollection<Reporter> Reporter { get; set; }
     }
 }

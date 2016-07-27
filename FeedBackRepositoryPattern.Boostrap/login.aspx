@@ -117,12 +117,10 @@
 				                        </div>
 
 				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-				                        </div>
-                                        <asp:Button ID="btnSendReport" runat="server" CssClass="btn btn-primary" Text="Gönder" />
-				                
+				                        	<label class="sr-only" for="form-about-yourself">Tell About Problem</label>
+                                            <asp:TextBox ID="txtProblem" runat="server" placeholder="Tell about problem" CssClass="form-about-yourself form-control"></asp:TextBox>
+			                        </div>
+                                        <asp:Button ID="btnSendReport" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport_Click" />
 			                    </div>
                         	</div>
                         	
