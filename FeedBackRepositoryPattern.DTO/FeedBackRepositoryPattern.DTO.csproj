@@ -50,6 +50,7 @@
     <Compile Include="AdminDropDownListDTO.cs" />
     <Compile Include="AdminListDTO.cs" />
     <Compile Include="AdminUpdateDTO.cs" />
+    <Compile Include="ProgrammerSendMailDTO.cs" />
     <Compile Include="ProjectAddDTO.cs" />
     <Compile Include="ProjectListDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

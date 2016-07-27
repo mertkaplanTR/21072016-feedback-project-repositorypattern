@@ -17,7 +17,6 @@ namespace FeedBackRepositoryPattern.Boostrap
             ddlProjects.DataSource = _ProjectService.GetProjectList();
             ddlProjects.DataValueField = "ProjectID";  // hafızadan tutalacak şey
             ddlProjects.DataTextField = "ProjectTitle";   //gösterilecek şey
-
             ddlProjects.DataBind();
             int x = Convert.ToInt32(ddlProjects.SelectedValue);
         }
@@ -25,6 +24,7 @@ namespace FeedBackRepositoryPattern.Boostrap
         protected void btnSendReport_Click(object sender, EventArgs e)
         {
             ReportService _ReportService = new ReportService();
+            
             ReportAddDTO _ReportAddDTO = new ReportAddDTO();
 
             _ReportAddDTO.FullName = txtFullName.Text;
@@ -34,6 +34,9 @@ namespace FeedBackRepositoryPattern.Boostrap
             _ReportAddDTO.ContactNumber = txtContactNumber.Text;
             _ReportAddDTO.Subject = txtSubject.Text;
             _ReportAddDTO.CreatedDate = DateTime.Now;
+            int x = Convert.ToInt32(ddlProjects.SelectedValue);
+
+
             _ReportService.AddFunctionReportService(_ReportAddDTO);
             //seçilen selectedvalue'yi nasıl göndericem 
         }
