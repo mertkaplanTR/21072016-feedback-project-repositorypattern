@@ -10,11 +10,11 @@ namespace FeedBackRepositoryPattern.Service
 {
     public class ProjectService
     {
-        ProjectsRepository _ProjectService = new ProjectsRepository();
+        ProjectsRepository _ProjectsRepository = new ProjectsRepository();
 
         public IList<ProjectListDTO> GetProjectList()
         {
-            return _ProjectService.GetList().Select(
+            return _ProjectsRepository.GetList().Select(
                x => new ProjectListDTO
                {
                    ProjectID = x.ProjectID,

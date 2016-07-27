@@ -52,7 +52,8 @@
                     </div>
                     
                     <div class="row">
-                        <div class="col-sm-5">
+                       <%--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+                           <div class="col-sm-5">
                         	
                         	<div class="form-box">
 	                        	<div class="form-top">
@@ -79,7 +80,7 @@
 				                    </form>
 			                    </div>
 		                    </div>
-                        </div>
+                        </div>--%>
                         
                         <div class="col-sm-1 middle-border"></div>
                         <div class="col-sm-1"></div>
@@ -111,15 +112,36 @@
                                             <asp:TextBox ID="txtEmail" type="email" runat="server" placeholder="Email Address" CssClass="form-email form-control" required></asp:TextBox>
 				                        </div>
 
+                                     <div class="form-group">
+				                        	<label class="sr-only" for="form-about-yourself">Tell About Problem</label>
+                                            <asp:TextBox ID="txtContactNumber" runat="server" placeholder="Contact Number" CssClass="form-about-yourself form-control"></asp:TextBox>
+			                        </div>
+
                                         <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
                                             <asp:DropDownList ID="ddlProjects" runat="server" CssClass="form-email form-control" placeholder="Proje Seçiniz"></asp:DropDownList>
 				                        </div>
 
+                                     <div class="form-group">
+				                        	<label class="sr-only" for="form-about-yourself">Tell About Problem</label>
+                                            <asp:TextBox ID="txtSubject" runat="server" placeholder="Subject" CssClass="form-about-yourself form-control"></asp:TextBox>
+			                        </div>
+
+
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-about-yourself">Tell About Problem</label>
                                             <asp:TextBox ID="txtProblem" runat="server" placeholder="Tell about problem" CssClass="form-about-yourself form-control"></asp:TextBox>
 			                        </div>
+
+
+                                      
+
+                                    
+
+
+
+
+
                                         <asp:Button ID="btnSendReport" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport_Click" />
 			                    </div>
                         	</div>

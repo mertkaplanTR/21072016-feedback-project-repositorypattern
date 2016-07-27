@@ -24,7 +24,18 @@ namespace FeedBackRepositoryPattern.Boostrap
 
         protected void btnSendReport_Click(object sender, EventArgs e)
         {
-            
+            ReportService _ReportService = new ReportService();
+            ReportAddDTO _ReportAddDTO = new ReportAddDTO();
+
+            _ReportAddDTO.FullName = txtFullName.Text;
+            _ReportAddDTO.Company = txtCompany.Text;
+            _ReportAddDTO.EmailAddress = txtEmail.Text;
+            _ReportAddDTO.Description = txtProblem.Text;
+            _ReportAddDTO.ContactNumber = txtContactNumber.Text;
+            _ReportAddDTO.Subject = txtSubject.Text;
+            _ReportAddDTO.CreatedDate = DateTime.Now;
+            _ReportService.AddFunctionReportService(_ReportAddDTO);
+            //seçilen selectedvalue'yi nasıl göndericem 
         }
     }
 }
