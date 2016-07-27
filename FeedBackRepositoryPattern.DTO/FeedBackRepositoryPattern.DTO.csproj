@@ -47,8 +47,10 @@
   <ItemGroup>
     <Compile Include="AdminAddDTO.cs" />
     <Compile Include="AdminDeleteDTO.cs" />
+    <Compile Include="AdminDropDownListDTO.cs" />
     <Compile Include="AdminListDTO.cs" />
     <Compile Include="AdminUpdateDTO.cs" />
+    <Compile Include="ProjectListDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

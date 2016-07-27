@@ -96,6 +96,16 @@
     <Folder Include="img\" />
     <Folder Include="js\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FeedBackRepositoryPattern.DTO\FeedBackRepositoryPattern.DTO.csproj">
+      <Project>{d9ca5cea-b216-4271-add2-a03f752bb334}</Project>
+      <Name>FeedBackRepositoryPattern.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FeedBackRepositoryPattern.Service\FeedBackRepositoryPattern.Service.csproj">
+      <Project>{ffebbd1a-2c66-4e6b-9496-95a8f2fb7df4}</Project>
+      <Name>FeedBackRepositoryPattern.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -15,7 +15,11 @@ namespace FeedBackRepositoryPattern.WebApplication
         {
             AdminService service = new AdminService();
             DropDownList1.DataSource = service.GetAdminList();
+            DropDownList1.DataValueField = "UserID";
+            DropDownList1.DataTextField = "Username"; //gosterilecek şey
+            
             DropDownList1.DataBind();
+            int x = Convert.ToInt32(DropDownList1.SelectedValue);
         }
     }
 }
