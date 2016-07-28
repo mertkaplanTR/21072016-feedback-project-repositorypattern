@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="_OnSelectedIndexChanged" AppendDataBoundItems="true"></asp:DropDownList>
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
     </div>
     </form>
 </body>

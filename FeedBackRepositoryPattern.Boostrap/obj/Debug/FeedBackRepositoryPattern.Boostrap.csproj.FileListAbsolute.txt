@@ -1,9 +1,6 @@
-C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Boostrap.dll.config
-C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Boostrap.dll
-C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Boostrap.pdb
-C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\obj\Debug\FeedBackRepositoryPattern.Boostrap.dll
-C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\obj\Debug\FeedBackRepositoryPattern.Boostrap.pdb
-C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\obj\Debug\FeedBackRepositoryPattern.Boostrap.csprojResolveAssemblyReference.cache
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Boostrap.dll.config
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Boostrap.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Boostrap.pdb
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.DTO.dll
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Service.dll
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Repository.dll
@@ -14,3 +11,6 @@ C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.Repository.pdb
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\FeedBackRepositoryPattern.ORM.pdb
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\bin\EntityFramework.xml
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\obj\Debug\FeedBackRepositoryPattern.Boostrap.csprojResolveAssemblyReference.cache
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\obj\Debug\FeedBackRepositoryPattern.Boostrap.dll
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.Boostrap\obj\Debug\FeedBackRepositoryPattern.Boostrap.pdb

@@ -18,9 +18,9 @@ namespace FeedBackRepositoryPattern.Service
     {
         ProgrammerRepository _ProgrammerRepository = new ProgrammerRepository();
 
-        public IList<ProgrammerSendMailDTO> GetProgrammerMails()
+        public IList<ProgrammerSendMailDTO> GetProgrammerMails(ProgrammerSendMailDTO entity)
         {
-            return _ProgrammerRepository.GetList().Select(
+            return _ProgrammerRepository.GetList().Select(   // sorguyu düzelt.
                 x => new ProgrammerSendMailDTO
                 {
                     ProgrammerEmail = x.ProgrammerEmail

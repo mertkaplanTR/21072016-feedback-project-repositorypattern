@@ -28,7 +28,6 @@ namespace FeedBackRepositoryPattern.Service
                 }).ToList();
         }
 
-
         public void AddAdminServiceFunction(AdminAddDTO entity)
         {
             Admin admin = new Admin

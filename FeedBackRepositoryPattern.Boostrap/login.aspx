@@ -119,7 +119,7 @@
 
                                         <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
-                                            <asp:DropDownList ID="ddlProjects" runat="server" CssClass="form-email form-control" placeholder="Proje Seçiniz"></asp:DropDownList>
+                                            <asp:DropDownList ID="ddlProjects" runat="server" placeholder="Proje Seçiniz" CssClass="btn btn-primary dropdown-toggle" AppendDataBoundItems="true"></asp:DropDownList>
 				                        </div>
 
                                      <div class="form-group">
@@ -132,15 +132,6 @@
 				                        	<label class="sr-only" for="form-about-yourself">Tell About Problem</label>
                                             <asp:TextBox ID="txtProblem" runat="server" placeholder="Tell about problem" CssClass="form-about-yourself form-control"></asp:TextBox>
 			                        </div>
-
-
-                                      
-
-                                    
-
-
-
-
 
                                         <asp:Button ID="btnSendReport" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport_Click" />
 			                    </div>
