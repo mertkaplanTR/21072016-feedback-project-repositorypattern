@@ -14,17 +14,17 @@ namespace FeedBackRepositoryPattern.Boostrap
         protected void Page_Load(object sender, EventArgs e)
         {
             ProjectService _ProjectService = new ProjectService();
+
             ddlProjects.DataSource = _ProjectService.GetProjectList();
             ddlProjects.DataValueField = "ProjectID";  // hafızadan tutalacak şey
             ddlProjects.DataTextField = "ProjectTitle";   //gösterilecek şey
             ddlProjects.DataBind();
-            int x = Convert.ToInt32(ddlProjects.SelectedValue);
+            int x = int.Parse(ddlProjects.SelectedValue);
         }
 
         protected void btnSendReport_Click(object sender, EventArgs e)
         {
             ReportService _ReportService = new ReportService();
-            
             ReportAddDTO _ReportAddDTO = new ReportAddDTO();
 
             _ReportAddDTO.FullName = txtFullName.Text;
@@ -36,9 +36,22 @@ namespace FeedBackRepositoryPattern.Boostrap
             _ReportAddDTO.CreatedDate = DateTime.Now;
             int x = Convert.ToInt32(ddlProjects.SelectedValue);
 
-
             _ReportService.AddFunctionReportService(_ReportAddDTO);
-            //seçilen selectedvalue'yi nasıl göndericem 
+
+
+
+
+            /*
+             * Maile gönderme fonksiyonu seçilen id'ye göre. 
+            ProgrammerService _ProgrammerService = new ProgrammerService();
+            foreach (var emailAdresses in _ProgrammerService.GetProgrammerMails())
+            {
+                _ProgrammerService.sendMail(emailAdresses);
+            }
+            */
+
+
+
         }
     }
 }

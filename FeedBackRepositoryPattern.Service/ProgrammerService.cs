@@ -6,7 +6,6 @@ using System.Web;
 using System.Net.Mail;
 using System.Net;
 
-
 using FeedBackRepositoryPattern.ORM;
 using FeedBackRepositoryPattern.DTO;
 using FeedBackRepositoryPattern.Repository;
@@ -15,28 +14,37 @@ using FeedBackRepositoryPattern.Repository;
 namespace FeedBackRepositoryPattern.Service
 {
 
-   public class ProgrammerService
+    public class ProgrammerService
     {
         ProgrammerRepository _ProgrammerRepository = new ProgrammerRepository();
 
-        public IList<ProgrammerSendMailDTO> SendEmailFunction()
+        public IList<ProgrammerSendMailDTO> GetProgrammerMails()
         {
             return _ProgrammerRepository.GetList().Select(
                 x => new ProgrammerSendMailDTO
                 {
-                    ProgrammerID = x.ProgrammerID,
-                    ProgrammerName=x.ProgrammerName,
-                    ProgrammerEmail = x.ProgrammerEmail 
-                   
+                    ProgrammerEmail = x.ProgrammerEmail
                 }).ToList();
-           ////////////buradan email gonder add functionuna gönderin oradan yapmak lazım
         }
 
-    
+        public void sendMail(ProgrammerSendMailDTO entity)
+        {
+            SmtpClient client = new SmtpClient();
+            client.Port = 587;
+            client.Host = "smtp.live.com";
+            client.EnableSsl = true;
+            client.Timeout = 50000;
+            client.Credentials = new NetworkCredential("rdcpartner@outlook.com", "passwordugirsilindi");
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress("rdcpartner@outlook.com", "rdcpartner@outlook.com");
+            mail.To.Add(entity.ProgrammerEmail);
+            mail.Subject = "demo";
+            client.Send(mail);
 
         }
 
-        
-        
     }
+}
+        
+    
 
