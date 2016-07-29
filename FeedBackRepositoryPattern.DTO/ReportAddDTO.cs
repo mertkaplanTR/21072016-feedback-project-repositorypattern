@@ -14,5 +14,6 @@ namespace FeedBackRepositoryPattern.DTO
         public DateTime CreatedDate { get; set; }
         public string Subject { get; set; }
         public string Description { get; set; }
+       
     }
 }

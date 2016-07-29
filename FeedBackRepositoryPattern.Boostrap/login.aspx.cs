@@ -47,9 +47,26 @@ namespace FeedBackRepositoryPattern.Boostrap
 
 
 
-            string x = ddlProjects.SelectedValue;
+            int SelectedProjectID = int.Parse(ddlProjects.SelectedValue);
+            _ReportService.SendProjectID(SelectedProjectID);
             //test string is ok, duzeltdi
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //Seçilen projeyi fonksiyona gönderme kodu.
             ProgrammerService _ProgrammerService = new ProgrammerService();
             ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();

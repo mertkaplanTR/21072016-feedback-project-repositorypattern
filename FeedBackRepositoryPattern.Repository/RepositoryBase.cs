@@ -51,7 +51,5 @@ namespace FeedBackRepositoryPattern.Repository
             DataContex = new feedbackdatabaseEntities();
         }
 
-
-
     }
 }

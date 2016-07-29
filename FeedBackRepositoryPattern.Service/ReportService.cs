@@ -29,6 +29,11 @@ namespace FeedBackRepositoryPattern.Service
             _ReportRepository.AddSomething(_reporter);
         }
 
+        public void SendProjectID(int entity)
+        {
+            _ReportRepository.dondur(entity);   
+        }
+
     }
 
 }

@@ -24,7 +24,6 @@ namespace FeedBackRepositoryPattern.Service
                    ModifiedDate= Convert.ToDateTime(x.ModifiedDate)
                }).ToList();
         }
-
-
     }
 }
+ 
