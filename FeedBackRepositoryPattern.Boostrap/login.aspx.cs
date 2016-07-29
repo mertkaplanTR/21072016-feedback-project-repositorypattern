@@ -29,8 +29,7 @@ namespace FeedBackRepositoryPattern.Boostrap
         protected void btnSendReport_Click(object sender, EventArgs e)
         {
 
-            string x = ddlProjects.SelectedValue;
-            //test string is ok, duzeltdi
+
 
             
             ReportService _ReportService = new ReportService();
@@ -46,16 +45,22 @@ namespace FeedBackRepositoryPattern.Boostrap
             _ReportService.AddFunctionReportService(_ReportAddDTO);
             //yukarıdaki verileri database'e ekle.
 
+
+
+            string x = ddlProjects.SelectedValue;
+            //test string is ok, duzeltdi
+
+            //Seçilen projeyi fonksiyona gönderme kodu.
             ProgrammerService _ProgrammerService = new ProgrammerService();
             ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();
             _ProgrammerSendMailDTO.ProgrammerEmail = ddlProjects.SelectedValue;
-            //maile gönderme fonksiyonu alınan id'yi
 
             //linke tıklayınca mail gönderme fonksiyonu
-            //foreach(var programmerEmailAdresses in _ProgrammerService.GetProgrammerMails(_ProgrammerSendMailDTO.ProgrammerEmail))
-            //{
-            //    //do it here......
-            //}
+            foreach (var programmerEmailAdresses in _ProgrammerService.GetProgrammerMails(_ProgrammerSendMailDTO))
+            {
+               ///DO IT HERE
+            }
+
 
 
             /*
