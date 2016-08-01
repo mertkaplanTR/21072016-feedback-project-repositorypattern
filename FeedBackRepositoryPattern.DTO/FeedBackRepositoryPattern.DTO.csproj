@@ -51,6 +51,7 @@
     <Compile Include="AdminListDTO.cs" />
     <Compile Include="AdminUpdateDTO.cs" />
     <Compile Include="ProgrammerListDTO.cs" />
+    <Compile Include="ProgrammerProjectAddDTO.cs" />
     <Compile Include="ProgrammerSendMailDTO.cs" />
     <Compile Include="ProjectAddDTO.cs" />
     <Compile Include="ProjectListDTO.cs" />

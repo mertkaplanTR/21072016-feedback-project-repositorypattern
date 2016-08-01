@@ -15,23 +15,27 @@ namespace FeedBackRepositoryPattern.Repository
 
         public void SendProgrammerIDtoProjectID(int ProgrammerID,int ProjectID)
         {
-            //ProjeID'si 1 olana ProgrammerID'si 2 olanı atama
-            //ilk önce projeyi çek
-            //sonra programmer'i ata
-            //aşağıdaki kod ise ilk önce kursu çek sonra programmer'i ata
-            Programmers _Programmers= DataContex.Programmers.SingleOrDefault(a => a.ProgrammerID == ProgrammerID);
-            DataContex.Projects.FirstOrDefault(x => x.ProjectID == ProjectID).Programmers.Add(_Programmers);
+            //PROJE 1'E Adam ekleme
+            Programmers _Programmer= DataContex.Set<Programmers>().FirstOrDefault(x => x.ProgrammerID == ProgrammerID);
+            DataContex.Projects.FirstOrDefault(a => a.ProjectID == ProjectID).Programmers.Add(_Programmer);
+            DataContex.SaveChanges();
         }
+
 
         public void SendReportIDtoProjectID(int ReportID,int ProjectID)
         {
-           
+            //ProjeID'si 1 olana ProgrammerID'si 2 olanı atama
+            //ilk önce projeyi çek
+            //sonra programmer'i ata
+            //aşağıdaki kod ise ilk önce kursu çek sonra programmer'i ata  
             Reporter _Reporter = DataContex.Reporter.Single(a => a.ReportID == ReportID);
             DataContex.Projects.FirstOrDefault(a => a.ProjectID == ProjectID).Reporter.Add(_Reporter);
+            DataContex.SaveChanges();
         }
 
+
         public void dondur(int ProjeID)
-            // :))))))))))
+          
         {
             var query =
                 from a in DataContex.Programmers
@@ -42,9 +46,6 @@ namespace FeedBackRepositoryPattern.Repository
                      a.ProgrammerEmail
                  };
         }
-
-
-
 
     }
 

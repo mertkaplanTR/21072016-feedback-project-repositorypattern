@@ -34,6 +34,13 @@ namespace FeedBackRepositoryPattern.Service
             _ReportRepository.dondur(entity);   
         }
 
+
+        public void EnterProgrammerIDtoProjectID(int ProgrammerID,int ProjectID)
+        {
+            _ReportRepository.SendProgrammerIDtoProjectID(ProgrammerID, ProjectID);
+
+        }
+
     }
 
 }
