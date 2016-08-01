@@ -32,7 +32,7 @@ namespace FeedBackRepositoryPattern.Repository
 
 
         public void dondur(int ProjeID)
-          //alınan ProjeID'sine göre programmer maillerini döndürme fonksiyonu.
+          //Duzenle! --> alınan ProjeID'sine göre programmer maillerini döndürme fonksiyonu.
         {
             var query =
                 from a in DataContex.Programmers
@@ -47,9 +47,8 @@ namespace FeedBackRepositoryPattern.Repository
 
 
         public dynamic Pikacug()
-        //alınan ProjeID'sine göre programmer maillerini döndürme fonksiyonu.
+        //programmers hangi projeleri yapmıs gosterme fonksiyonu
         {
-           
                return (from a in DataContex.Programmers
                  from b in a.Projects
                  select new
