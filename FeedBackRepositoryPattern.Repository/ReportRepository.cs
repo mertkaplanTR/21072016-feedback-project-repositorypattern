@@ -15,7 +15,7 @@ namespace FeedBackRepositoryPattern.Repository
 
         public void SendProgrammerIDtoProjectID(int ProgrammerID,int ProjectID)
         {
-            //PROJE 1'E Adam ekleme
+            //Gelen Value'lara göre Projeye Programmer Atama Fonksiyonu
             Programmers _Programmer= DataContex.Set<Programmers>().FirstOrDefault(x => x.ProgrammerID == ProgrammerID);
             DataContex.Projects.FirstOrDefault(a => a.ProjectID == ProjectID).Programmers.Add(_Programmer);
             DataContex.SaveChanges();
@@ -24,10 +24,7 @@ namespace FeedBackRepositoryPattern.Repository
 
         public void SendReportIDtoProjectID(int ReportID,int ProjectID)
         {
-            //ProjeID'si 1 olana ProgrammerID'si 2 olanı atama
-            //ilk önce projeyi çek
-            //sonra programmer'i ata
-            //aşağıdaki kod ise ilk önce kursu çek sonra programmer'i ata  
+            //Proje raporlarını Project ID ile eşleştirip mapping tablosuna atama fonksiyonu.
             Reporter _Reporter = DataContex.Reporter.Single(a => a.ReportID == ReportID);
             DataContex.Projects.FirstOrDefault(a => a.ProjectID == ProjectID).Reporter.Add(_Reporter);
             DataContex.SaveChanges();
