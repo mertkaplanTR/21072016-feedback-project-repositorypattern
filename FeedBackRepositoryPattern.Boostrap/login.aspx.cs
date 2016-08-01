@@ -13,6 +13,7 @@ namespace FeedBackRepositoryPattern.Boostrap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GetDataGridData();
             //GetDropdown();
         }
 
@@ -92,15 +93,20 @@ namespace FeedBackRepositoryPattern.Boostrap
 
         protected void btnSendReport2_Click(object sender, EventArgs e)
         {
-            ReportService _ReportService = new ReportService();
-            ProgrammerProjectAddDTO _ProgrammerProjectAddDTO = new ProgrammerProjectAddDTO();
-            _ProgrammerProjectAddDTO.ProgrammerID = int.Parse(txtProgrammerID.Text);
-            _ProgrammerProjectAddDTO.ProjectID = int.Parse(txtProjectID.Text);
-            _ReportService.EnterProgrammerIDtoProjectID(_ProgrammerProjectAddDTO.ProgrammerID, _ProgrammerProjectAddDTO.ProjectID);
+            //diğer sayfaya taşındı changeresponsibilities sayfasına tasındı bu kod.
+            //ReportService _ReportService = new ReportService();
+            //ProgrammerProjectAddDTO _ProgrammerProjectAddDTO = new ProgrammerProjectAddDTO();
+            //_ProgrammerProjectAddDTO.ProgrammerID = int.Parse(txtProgrammerID.Text);
+            //_ProgrammerProjectAddDTO.ProjectID = int.Parse(txtProjectID.Text);
+            //_ReportService.EnterProgrammerIDtoProjectID(_ProgrammerProjectAddDTO.ProgrammerID, _ProgrammerProjectAddDTO.ProjectID);
 
         }
 
-
-
+        void GetDataGridData()
+        {
+            ReportService _ReportService = new ReportService();
+            grdProgrammersProjects.DataSource= _ReportService.pikacug();
+            grdProgrammersProjects.DataBind();
+        }
     }
 }

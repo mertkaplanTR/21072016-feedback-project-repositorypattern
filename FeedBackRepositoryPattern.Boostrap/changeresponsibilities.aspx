@@ -38,6 +38,9 @@
                     <div class="inner-bg">
                         <div class="container">
                             <div class="row">
+                              
+
+
                                <div class="col-sm-8 col-sm-offset-2 text">
                                    <h1><strong>Proje Atama</strong> </br><%--&amp;--%>Proje Değiştirme Sayfası</h1>
                                </div>

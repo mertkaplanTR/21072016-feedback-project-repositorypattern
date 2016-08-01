@@ -146,7 +146,7 @@
                             <asp:TextBox ID="txtProjectID" runat="server" placeholder="ProjectID" CssClass="form-about-yourself form-control"></asp:TextBox>
 			                          </div>
                           <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport2_Click" /></div>
-                        
+                          <asp:GridView ID="grdProgrammersProjects" runat="server"></asp:GridView>
                         </div>
 
            <!-- Javascript -->

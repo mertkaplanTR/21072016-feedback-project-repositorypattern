@@ -18,8 +18,6 @@ namespace FeedBackRepositoryPattern.Boostrap
         }
 
 
-
-
         protected void LoadProgrammersFunction()
         {
             ProgrammerService _ProgrammerService = new ProgrammerService();
@@ -39,12 +37,11 @@ namespace FeedBackRepositoryPattern.Boostrap
         }
 
 
-
-
         protected void btnSaveProgrammerToProject_Click(object sender, EventArgs e)
         {
-            string x = ddlProjects.SelectedValue;
-            string y = ddlProgammers.SelectedValue;
+            ReportService _ReportService = new ReportService();
+            ProgrammerProjectAddDTO _ProgrammerProjectAddDTO = new ProgrammerProjectAddDTO();
+            _ReportService.EnterProgrammerIDtoProjectID(int.Parse(ddlProgammers.SelectedValue), int.Parse(ddlProjects.SelectedValue));
         }
     }
 }

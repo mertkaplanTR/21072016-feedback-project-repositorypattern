@@ -57,6 +57,7 @@
     <Compile Include="ProjectListDTO.cs" />
     <Compile Include="ProjectProgrammer.cs" />
     <Compile Include="ProjectProgrammerDTO.cs" />
+    <Compile Include="ProjectProgrammerListDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportAddDTO.cs" />
     <Compile Include="ReportProjectDTO.cs" />

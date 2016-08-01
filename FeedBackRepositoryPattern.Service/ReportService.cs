@@ -40,7 +40,11 @@ namespace FeedBackRepositoryPattern.Service
             _ReportRepository.SendProgrammerIDtoProjectID(ProgrammerID, ProjectID);
 
         }
-
+        
+        public dynamic pikacug()
+        {
+           return  _ReportRepository.Pikacug();
+        }
     }
 
 }
