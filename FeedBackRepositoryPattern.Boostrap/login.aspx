@@ -146,21 +146,8 @@
                             <asp:TextBox ID="txtProjectID" runat="server" placeholder="ProjectID" CssClass="form-about-yourself form-control"></asp:TextBox>
 			                          </div>
                           <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport2_Click" /></div>
-
+                        
                         </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-
-
-
-
-
-
 
            <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>

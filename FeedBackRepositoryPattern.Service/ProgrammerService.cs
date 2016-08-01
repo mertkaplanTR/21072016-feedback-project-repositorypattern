@@ -13,22 +13,34 @@ using FeedBackRepositoryPattern.Repository;
 
 namespace FeedBackRepositoryPattern.Service
 {
-    /// <summary>
-    /// //////////////////////////////////////////////////////where conditionunu yaz
-    /// </summary>
+
     public class ProgrammerService
     {
         ProgrammerRepository _ProgrammerRepository = new ProgrammerRepository();
 
+        public IList<ProgrammerListDTO> GetProgammerList()
+        {
+            return _ProgrammerRepository.GetList().Select(
+                x => new ProgrammerListDTO
+                {
+                    ProgrammerID = x.ProgrammerID,
+                    ProgrammerName = x.ProgrammerName,
+                    ProgrammerEmail = x.ProgrammerEmail,
+                    CreatedDate=Convert.ToDateTime(x.CreatedDate),
+                    ModifiedDate=Convert.ToDateTime(x.ModifiedDate)
+                }
+                ).ToList();
+        }
+
+
         public IList<ProgrammerSendMailDTO> GetProgrammerMails(ProgrammerSendMailDTO entity)
         {
-            return _ProgrammerRepository.GetList().Select(   // sorguyu düzelt.
+            return _ProgrammerRepository.GetList().Select(   // TUM MAILLERI LISTELER ISTENILEN MAILLERI LISTEYENI REPORT SERVICEDE
                 x => new ProgrammerSendMailDTO
                 {
                     ProgrammerEmail = x.ProgrammerEmail
                 }).ToList();
         }
-
 
         //public void sendMail(ProgrammerSendMailDTO entity)
         //{

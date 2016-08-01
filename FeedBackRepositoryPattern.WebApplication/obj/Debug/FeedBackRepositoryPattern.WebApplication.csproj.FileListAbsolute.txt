@@ -14,3 +14,5 @@ C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\obj\Debug\FeedBackRepositoryPattern.WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\obj\Debug\FeedBackRepositoryPattern.WebApplication.dll
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\obj\Debug\FeedBackRepositoryPattern.WebApplication.pdb
+C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.WebApplication.dll.CodeAnalysisLog.xml
+C:\Users\Unknown\documents\visual studio 2015\Projects\FeedBackRepositoryPattern\FeedBackRepositoryPattern.WebApplication\bin\FeedBackRepositoryPattern.WebApplication.dll.lastcodeanalysissucceeded
