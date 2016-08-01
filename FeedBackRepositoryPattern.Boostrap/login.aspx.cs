@@ -105,7 +105,7 @@ namespace FeedBackRepositoryPattern.Boostrap
         void GetDataGridData()
         {
             ReportService _ReportService = new ReportService();
-            grdProgrammersProjects.DataSource= _ReportService.pikacug();
+            grdProgrammersProjects.DataSource= _ReportService.ProjectsToProgrammerListFunction();
             grdProgrammersProjects.DataBind();
         }
     }

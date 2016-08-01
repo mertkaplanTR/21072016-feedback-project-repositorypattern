@@ -46,7 +46,7 @@ namespace FeedBackRepositoryPattern.Repository
 
 
 
-        public dynamic Pikacug()
+        public dynamic ProjectsToProgrammerListFunction()
         //programmers hangi projeleri yapmıs gosterme fonksiyonu
         {
                return (from a in DataContex.Programmers

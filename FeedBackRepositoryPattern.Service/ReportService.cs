@@ -41,9 +41,9 @@ namespace FeedBackRepositoryPattern.Service
 
         }
         
-        public dynamic pikacug()
+        public dynamic ProjectsToProgrammerListFunction()
         {
-           return  _ReportRepository.Pikacug();
+           return  _ReportRepository.ProjectsToProgrammerListFunction();
         }
     }
 
