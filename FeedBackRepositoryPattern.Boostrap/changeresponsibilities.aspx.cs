@@ -15,8 +15,8 @@ namespace FeedBackRepositoryPattern.Boostrap
         {
             LoadProgrammersFunction();
             LoadProjectFunction();
+            GetDataGridData();
         }
-
 
         protected void LoadProgrammersFunction()
         {
@@ -36,12 +36,18 @@ namespace FeedBackRepositoryPattern.Boostrap
             ddlProjects.DataBind();
         }
 
-
         protected void btnSaveProgrammerToProject_Click(object sender, EventArgs e)
         {
             ReportService _ReportService = new ReportService();
             ProgrammerProjectAddDTO _ProgrammerProjectAddDTO = new ProgrammerProjectAddDTO();
             _ReportService.EnterProgrammerIDtoProjectID(int.Parse(ddlProgammers.SelectedValue), int.Parse(ddlProjects.SelectedValue));
+        }
+
+        void GetDataGridData()
+        {
+            ReportService _ReportService = new ReportService();
+            grdProgrammersProjects.DataSource = _ReportService.ProjectsToProgrammerListFunction();
+            grdProgrammersProjects.DataBind();
         }
     }
 }

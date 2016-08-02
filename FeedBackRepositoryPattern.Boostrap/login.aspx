@@ -87,7 +87,7 @@
                         	
 
                        <%-- Aşağıdaki kısım commentlenen çalışıyor sorun yok, sağ taraf tasarımdaki--%>
-                        <%--<div class="col-sm-5">
+                        <div class="col-sm-5">
                         	
                         	<div class="form-box">
                         		<div class="form-top">
@@ -137,16 +137,8 @@
 
                                         <asp:Button ID="btnSendReport" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport_Click" />
 			                    </div>
-                        	</div>--%>
-
-
-                            		<label class="sr-only" for="form-about-yourself">Tell About Problem</label>
-                                    <asp:TextBox ID="txtProgrammerID" runat="server" placeholder="ProgrammerID" CssClass="form-about-yourself form-control"></asp:TextBox>
-			                        </div>
-                            <asp:TextBox ID="txtProjectID" runat="server" placeholder="ProjectID" CssClass="form-about-yourself form-control"></asp:TextBox>
-			                          </div>
-                          <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Gönder" OnClick="btnSendReport2_Click" /></div>
-                          <asp:GridView ID="grdProgrammersProjects" runat="server"></asp:GridView>
+                        	</div>
+                        <asp:GridView ID="grdProgrammersProjects" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed"></asp:GridView>
                         </div>
 
            <!-- Javascript -->

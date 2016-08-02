@@ -13,72 +13,57 @@ namespace FeedBackRepositoryPattern.Boostrap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetDataGridData();
-            //GetDropdown();
+
+            GetDropdown();
         }
 
-        //protected void GetDropdown()
-        //{
-        //    ProjectService _ProjectService = new ProjectService();
+        protected void GetDropdown()
+        {
+            ProjectService _ProjectService = new ProjectService();
 
-        //    ddlProjects.DataSource = _ProjectService.GetProjectList();
-        //    ddlProjects.DataValueField = "ProjectID";  // hafızadan tutalacak şey
-        //    ddlProjects.DataTextField = "ProjectTitle";   //gösterilecek şey
-        //    ddlProjects.DataBind();
-        //}
+            ddlProjects.DataSource = _ProjectService.GetProjectList();
+            ddlProjects.DataValueField = "ProjectID";  // hafızadan tutalacak şey
+            ddlProjects.DataTextField = "ProjectTitle";   //gösterilecek şey
+            ddlProjects.DataBind();
+        }
 
-        //protected void btnSendReport_Click(object sender, EventArgs e)
-        //{
+        protected void btnSendReport_Click(object sender, EventArgs e)
+        {
 
-        //    ReportService _ReportService = new ReportService();
-        //    ReportAddDTO _ReportAddDTO = new ReportAddDTO();
+            ReportService _ReportService = new ReportService();
+            ReportAddDTO _ReportAddDTO = new ReportAddDTO();
 
-        //    _ReportAddDTO.FullName = txtFullName.Text;
-        //    _ReportAddDTO.Company = txtCompany.Text;
-        //    _ReportAddDTO.EmailAddress = txtEmail.Text;
-        //    _ReportAddDTO.Description = txtProblem.Text;
-        //    _ReportAddDTO.ContactNumber = txtContactNumber.Text;
-        //    _ReportAddDTO.Subject = txtSubject.Text;
-        //    _ReportAddDTO.CreatedDate = DateTime.Now;
-        //    _ReportService.AddFunctionReportService(_ReportAddDTO);
-        //    //yukarıdaki verileri database'e ekle.DONE.
-
-
-
-        //    int SelectedProjectID = int.Parse(ddlProjects.SelectedValue);
-        //    _ReportService.SendProjectID(SelectedProjectID);
-        //    //test string is ok, duzeltdi
+            _ReportAddDTO.FullName = txtFullName.Text;
+            _ReportAddDTO.Company = txtCompany.Text;
+            _ReportAddDTO.EmailAddress = txtEmail.Text;
+            _ReportAddDTO.Description = txtProblem.Text;
+            _ReportAddDTO.ContactNumber = txtContactNumber.Text;
+            _ReportAddDTO.Subject = txtSubject.Text;
+            _ReportAddDTO.CreatedDate = DateTime.Now;
+            _ReportService.AddFunctionReportService(_ReportAddDTO);
+            //yukarıdaki verileri database'e ekle.DONE.
 
 
 
+            int SelectedProjectID = int.Parse(ddlProjects.SelectedValue);
+            _ReportService.SendProjectID(SelectedProjectID);
+            //test string is ok, duzeltdi
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //Seçilen projeyi fonksiyona gönderme kodu.
+            ProgrammerService _ProgrammerService = new ProgrammerService();
+            ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();
+            _ProgrammerSendMailDTO.ProgrammerEmail = ddlProjects.SelectedValue;
+
+            //linke tıklayınca mail gönderme fonksiyonu
+            foreach (var programmerEmailAdresses in _ProgrammerService.GetProgrammerMails(_ProgrammerSendMailDTO))
+            {
+                ///DO IT HERE
+            }
 
 
 
-
-
-
-
-
-
-
-
-
-
-        //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //    //Seçilen projeyi fonksiyona gönderme kodu.
-        //    ProgrammerService _ProgrammerService = new ProgrammerService();
-        //    ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();
-        //    _ProgrammerSendMailDTO.ProgrammerEmail = ddlProjects.SelectedValue;
-
-        //    //linke tıklayınca mail gönderme fonksiyonu
-        //    foreach (var programmerEmailAdresses in _ProgrammerService.GetProgrammerMails(_ProgrammerSendMailDTO))
-        //    {
-        //       ///DO IT HERE
-        //    }
-
-
-
-        //    /*
+            /*
         //     * Maile gönderme fonksiyonu seçilen id'ye göre. 
         //    ProgrammerService _ProgrammerService = new ProgrammerService();
         //    foreach (var emailAdresses in _ProgrammerService.GetProgrammerMails())
@@ -89,24 +74,10 @@ namespace FeedBackRepositoryPattern.Boostrap
 
 
 
-        //}
-
-        protected void btnSendReport2_Click(object sender, EventArgs e)
-        {
-            //diğer sayfaya taşındı changeresponsibilities sayfasına tasındı bu kod.
-            //ReportService _ReportService = new ReportService();
-            //ProgrammerProjectAddDTO _ProgrammerProjectAddDTO = new ProgrammerProjectAddDTO();
-            //_ProgrammerProjectAddDTO.ProgrammerID = int.Parse(txtProgrammerID.Text);
-            //_ProgrammerProjectAddDTO.ProjectID = int.Parse(txtProjectID.Text);
-            //_ReportService.EnterProgrammerIDtoProjectID(_ProgrammerProjectAddDTO.ProgrammerID, _ProgrammerProjectAddDTO.ProjectID);
+            //}
 
         }
 
-        void GetDataGridData()
-        {
-            ReportService _ReportService = new ReportService();
-            grdProgrammersProjects.DataSource= _ReportService.ProjectsToProgrammerListFunction();
-            grdProgrammersProjects.DataBind();
-        }
+        
     }
 }

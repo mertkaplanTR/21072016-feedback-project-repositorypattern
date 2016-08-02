@@ -38,9 +38,7 @@
                     <div class="inner-bg">
                         <div class="container">
                             <div class="row">
-                              
-
-
+                                 <asp:GridView ID="grdProgrammersProjects" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed"></asp:GridView>
                                <div class="col-sm-8 col-sm-offset-2 text">
                                    <h1><strong>Proje Atama</strong> </br><%--&amp;--%>Proje Değiştirme Sayfası</h1>
                                </div>
@@ -76,18 +74,6 @@
          
          
          </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
            <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
