@@ -40,7 +40,7 @@
                 	
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Hata Bildirim</strong> </br>Giriş &amp; Kayıt Sayfası</h1>
+                            <h1><strong>Login & Reporting</strong></h1>
                             <%--<div class="description">
                             	<p>
 	                            	This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap. 
@@ -52,13 +52,13 @@
                     </div>
                     
                     <div class="row">
-                       <%--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+                      
                            <div class="col-sm-5">
                         	
                         	<div class="form-box">
 	                        	<div class="form-top">
 	                        		<div class="form-top-left">
-	                        			<h3>Login to our site</h3>
+	                        			<h3>Admin Login Area</h3>
 	                            		<p>Enter username and password to log on:</p>
 	                        		</div>
 	                        		<div class="form-top-right">
@@ -80,7 +80,7 @@
 				                    </form>
 			                    </div>
 		                    </div>
-                        </div>--%>
+                        </div>
                         
                         <div class="col-sm-1 middle-border"></div>
                         <div class="col-sm-1"></div>
@@ -92,8 +92,8 @@
                         	<div class="form-box">
                         		<div class="form-top">
 	                        		<div class="form-top-left">
-	                        			<h3>Sign up now</h3>
-	                            		<p>Fill in the form below to get instant access:</p>
+	                        			<h3>Report Us Now</h3>
+	                            		<p>Fill in the form below to report your project</p>
 	                        		</div>
 	                        		<div class="form-top-right">
 	                        			<i class="fa fa-pencil"></i>
