@@ -13,16 +13,16 @@ namespace FeedBackRepositoryPattern.Repository
             return DataContex.Set<Reporter>().Where(x => x.ReportID == ReportID).SingleOrDefault();
         }
 
-        public void SendProgrammerIDtoProjectID(int ProgrammerID,int ProjectID)
+        public void SendProgrammerIDtoProjectID(int ProgrammerID, int ProjectID)
         {
             //Gelen Value'lara göre Projeye Programmer Atama Fonksiyonu
-            Programmers _Programmer= DataContex.Set<Programmers>().FirstOrDefault(x => x.ProgrammerID == ProgrammerID);
+            Programmers _Programmer = DataContex.Set<Programmers>().FirstOrDefault(x => x.ProgrammerID == ProgrammerID);
             DataContex.Projects.FirstOrDefault(a => a.ProjectID == ProjectID).Programmers.Add(_Programmer);
             DataContex.SaveChanges();
         }
 
 
-        public void SendReportIDtoProjectID(int ReportID,int ProjectID)
+        public void SendReportIDtoProjectID(int ReportID, int ProjectID)
         {
             //Proje raporlarını Project ID ile eşleştirip mapping tablosuna atama fonksiyonu.
             Reporter _Reporter = DataContex.Reporter.Single(a => a.ReportID == ReportID);
@@ -30,38 +30,33 @@ namespace FeedBackRepositoryPattern.Repository
             DataContex.SaveChanges();
         }
 
-
-        public void dondur(int ProjeID)
-          //Duzenle! --> alınan ProjeID'sine göre programmer maillerini döndürme fonksiyonu.
-        {
-            var query =
-                from a in DataContex.Programmers
-                 from b in a.Projects
-                 where b.ProjectID == ProjeID
-                 select new
-                 {
-                     a.ProgrammerEmail
-                 };
-        }
-
-
-
         public dynamic ProjectsToProgrammerListFunction()
         //programmers hangi projeleri yapmıs gosterme fonksiyonu
         {
-               return (from a in DataContex.Programmers
-                 from b in a.Projects
-                 select new
-                 {
-                     ProgrammerID = a.ProgrammerID,
-                     ProgrammerName = a.ProgrammerName,
-                     ProgammerEmail = a.ProgrammerEmail,
-                     ProjectID = b.ProjectID,
-                     ProjectTitle = b.ProjectTitle
-                 }).ToList() ;
+            return (from a in DataContex.Programmers
+                    from b in a.Projects
+                    select new
+                    {
+                        ProgrammerID = a.ProgrammerID,
+                        ProgrammerName = a.ProgrammerName,
+                        ProgammerEmail = a.ProgrammerEmail,
+                        ProjectID = b.ProjectID,
+                        ProjectTitle = b.ProjectTitle
+                    }).ToList();
 
         }
 
-    }
 
+
+
+        public dynamic dondur(int ProjeID){
+            return (from a in DataContex.Programmers
+                from b in a.Projects
+                where b.ProjectID == ProjeID
+                select new
+                {
+                    a.ProgrammerEmail
+                }).ToList();
+        }
+    }
 }

@@ -11,7 +11,7 @@ namespace FeedBackRepositoryPattern.Service
     public class ReportService
     {
         ReportRepository _ReportRepository = new ReportRepository();
-         //ILISTI YAZILMADI DTIOYA GIT DTO YARATIP YAZ.
+        //ILISTI YAZILMADI DTIOYA GIT DTO YARATIP YAZ.
 
 
         public void AddFunctionReportService(ReportAddDTO entity)
@@ -19,32 +19,34 @@ namespace FeedBackRepositoryPattern.Service
             Reporter _reporter = new Reporter
             {
                 FullName = entity.FullName,
-                Company=entity.Company,
-                EmailAddress=entity.EmailAddress,
-                ContactNumber=entity.ContactNumber,
-                CreatedDate=Convert.ToDateTime(entity.CreatedDate),
-                Subject=entity.Subject,
-                Description=entity.Description
+                Company = entity.Company,
+                EmailAddress = entity.EmailAddress,
+                ContactNumber = entity.ContactNumber,
+                CreatedDate = Convert.ToDateTime(entity.CreatedDate),
+                Subject = entity.Subject,
+                Description = entity.Description
             };
             _ReportRepository.AddSomething(_reporter);
         }
 
-        public void SendProjectID(int entity)
+        public dynamic ProjectsToProgrammerListFunction()
         {
-            _ReportRepository.dondur(entity);   
+            return _ReportRepository.ProjectsToProgrammerListFunction();
         }
 
-
-        public void EnterProgrammerIDtoProjectID(int ProgrammerID,int ProjectID)
+        public void EnterProgrammerIDtoProjectID(int ProgrammerID, int ProjectID)
         {
             _ReportRepository.SendProgrammerIDtoProjectID(ProgrammerID, ProjectID);
 
         }
-        
-        public dynamic ProjectsToProgrammerListFunction()
+
+        public dynamic SendSelectedProjectID(int ProjectID)
         {
-           return  _ReportRepository.ProjectsToProgrammerListFunction();
+            return _ReportRepository.dondur(ProjectID);
         }
+
+
+
     }
 
 }

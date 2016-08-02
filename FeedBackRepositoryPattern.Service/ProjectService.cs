@@ -21,9 +21,8 @@ namespace FeedBackRepositoryPattern.Service
                    ProjectTitle = x.ProjectTitle,
                    ProjectExplanation = x.ProjectExplanation,
                    CreatedDate = Convert.ToDateTime(x.CreatedDate),
-                   ModifiedDate= Convert.ToDateTime(x.ModifiedDate)
+                   ModifiedDate = Convert.ToDateTime(x.ModifiedDate)
                }).ToList();
         }
     }
 }
- 

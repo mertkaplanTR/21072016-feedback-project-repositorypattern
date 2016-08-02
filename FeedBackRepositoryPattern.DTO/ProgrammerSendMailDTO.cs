@@ -8,8 +8,6 @@ namespace FeedBackRepositoryPattern.DTO
 {
     public class ProgrammerSendMailDTO
     {
-       // public int ProgrammerID { get; set; }
-        //public string ProgrammerName { get; set; }
         public string ProgrammerEmail { get; set; }
 
     }

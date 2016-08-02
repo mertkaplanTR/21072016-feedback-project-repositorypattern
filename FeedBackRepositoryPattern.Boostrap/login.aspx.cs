@@ -29,7 +29,6 @@ namespace FeedBackRepositoryPattern.Boostrap
 
         protected void btnSendReport_Click(object sender, EventArgs e)
         {
-
             ReportService _ReportService = new ReportService();
             ReportAddDTO _ReportAddDTO = new ReportAddDTO();
 
@@ -41,25 +40,68 @@ namespace FeedBackRepositoryPattern.Boostrap
             _ReportAddDTO.Subject = txtSubject.Text;
             _ReportAddDTO.CreatedDate = DateTime.Now;
             _ReportService.AddFunctionReportService(_ReportAddDTO);
-            //yukarıdaki verileri database'e ekle.DONE.
 
 
 
-            int SelectedProjectID = int.Parse(ddlProjects.SelectedValue);
-            _ReportService.SendProjectID(SelectedProjectID);
-            //test string is ok, duzeltdi
+
+
+
+
+
+
+
+
+
+
+            //linke
+         
+            ProgrammerService _ProgrammerService = new ProgrammerService();
+            List<ProgrammerSendMailDTO> _ProgrammerSendMailDTO = new List<ProgrammerSendMailDTO>();
+            
+
+
+            int alinanProjeID = int.Parse(ddlProjects.SelectedValue);
+           var x = _ReportService.SendSelectedProjectID(alinanProjeID);
+
+            foreach (var programmerEmailAdress in x)
+            {
+                //hata var
+                _ProgrammerService.sendMail(programmerEmailAdress);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //Seçilen projeyi fonksiyona gönderme kodu.
-            ProgrammerService _ProgrammerService = new ProgrammerService();
-            ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();
-            _ProgrammerSendMailDTO.ProgrammerEmail = ddlProjects.SelectedValue;
+            //ProgrammerService _ProgrammerService = new ProgrammerService();
+            //ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();
+            //_ProgrammerSendMailDTO.ProgrammerEmail = ddlProjects.SelectedValue;
 
-            //linke tıklayınca mail gönderme fonksiyonu
-            foreach (var programmerEmailAdresses in _ProgrammerService.GetProgrammerMails(_ProgrammerSendMailDTO))
-            {
-                ///DO IT HERE
-            }
 
 
 
@@ -75,9 +117,6 @@ namespace FeedBackRepositoryPattern.Boostrap
 
 
             //}
-
         }
-
-        
     }
 }
