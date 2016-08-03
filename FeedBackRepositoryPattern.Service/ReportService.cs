@@ -11,8 +11,21 @@ namespace FeedBackRepositoryPattern.Service
     public class ReportService
     {
         ReportRepository _ReportRepository = new ReportRepository();
-        //ILISTI YAZILMADI DTIOYA GIT DTO YARATIP YAZ.
-
+        public IList<ReportListDTO> GetReportList()
+        {
+            return _ReportRepository.GetList().Select(
+                x => new ReportListDTO
+                {
+                    ReportID=x.ReportID,
+                    FullName=x.FullName,
+                    Company=x.Company,
+                    EmailAddress=x.EmailAddress,
+                    ContactNumber=x.ContactNumber,
+                    CreatedDate=Convert.ToDateTime(x.CreatedDate),
+                    Subject=x.Subject,
+                    Description=x.Description
+                }).ToList();
+        }
 
         public void AddFunctionReportService(ReportAddDTO entity)
         {

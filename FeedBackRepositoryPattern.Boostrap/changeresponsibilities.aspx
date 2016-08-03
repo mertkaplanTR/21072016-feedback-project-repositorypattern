@@ -38,19 +38,16 @@
                     <div class="inner-bg">
                         <div class="container">
                             <div class="row">
-                                 <asp:GridView ID="grdProgrammersProjects" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed"></asp:GridView>
                                <div class="col-sm-8 col-sm-offset-2 text">
                                    <h1><strong>Proje Atama</strong> </br><%--&amp;--%>Proje Değiştirme Sayfası</h1>
                                </div>
+                                <asp:GridView ID="grdProgrammersProjects" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed"></asp:GridView>
                              </div>
                           </div>
                         </div>
-
              <div class="col-sm-6">
                     <div class="row">
                         <div class="form-group">
-
-				          
                             <h3><strong>Programmer Seçiniz</strong><br />
                            <asp:DropDownList ID="ddlProgammers" runat="server" CssClass="btn btn-primary dropdown-toggle" AppendDataBoundItems="true"></asp:DropDownList>
 				        </div>

@@ -60,6 +60,7 @@
     <Compile Include="ProjectProgrammerListDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportAddDTO.cs" />
+    <Compile Include="ReportListDTO.cs" />
     <Compile Include="ReportProjectDTO.cs" />
   </ItemGroup>
   <ItemGroup>
