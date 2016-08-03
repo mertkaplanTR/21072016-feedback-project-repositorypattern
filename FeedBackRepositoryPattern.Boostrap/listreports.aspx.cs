@@ -23,5 +23,9 @@ namespace FeedBackRepositoryPattern.Boostrap
             grdListReport.DataBind();
         }
 
+        protected void grdListReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
