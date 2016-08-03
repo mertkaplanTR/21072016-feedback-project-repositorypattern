@@ -41,82 +41,14 @@ namespace FeedBackRepositoryPattern.Boostrap
             _ReportAddDTO.CreatedDate = DateTime.Now;
             _ReportService.AddFunctionReportService(_ReportAddDTO);
 
-
-
-
-
-
-
-
-
-
-
-
-
-            //linke
-         
             ProgrammerService _ProgrammerService = new ProgrammerService();
             List<ProgrammerSendMailDTO> _ProgrammerSendMailDTO = new List<ProgrammerSendMailDTO>();
-            
-
-
-            int alinanProjeID = int.Parse(ddlProjects.SelectedValue);
-           var x = _ReportService.SendSelectedProjectID(alinanProjeID);
-
-            foreach (var programmerEmailAdress in x)
-            {
-                //hata var
-                _ProgrammerService.sendMail(programmerEmailAdress);
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //Seçilen projeyi fonksiyona gönderme kodu.
-            //ProgrammerService _ProgrammerService = new ProgrammerService();
-            //ProgrammerSendMailDTO _ProgrammerSendMailDTO = new ProgrammerSendMailDTO();
-            //_ProgrammerSendMailDTO.ProgrammerEmail = ddlProjects.SelectedValue;
-
-
-
-
-            /*
-        //     * Maile gönderme fonksiyonu seçilen id'ye göre. 
-        //    ProgrammerService _ProgrammerService = new ProgrammerService();
-        //    foreach (var emailAdresses in _ProgrammerService.GetProgrammerMails())
-        //    {
-        //        _ProgrammerService.sendMail(emailAdresses);
-        //    }
-        //    */
-
-
-
-            //}
+            _ReportService.SendSelectedProjectID(int.Parse(ddlProjects.SelectedValue));
+            //_ReportService.SendSelectedProjectID(int.Parse(ddlProjects.SelectedValue));
+            //yukarıdaki kod ddlproject isimli dropdowndan alınan ID'nin int'e çevirilip reportservice 
+            //içindeki sendselectedpoint isimli fonksiyonuna gönderilmesini sağlar.
+            //bu fonksiyon sonucunda null dönse dahi reportrepository incelenirse eğer 
+            //foreach yapısı ile tum seçilen projedeki kişilere mail gönderildiği gözlemlenebilir.
         }
     }
 }

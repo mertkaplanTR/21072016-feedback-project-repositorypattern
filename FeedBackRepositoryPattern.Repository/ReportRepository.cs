@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web;
+using System.Net.Mail;
+using System.Net;
+
 using FeedBackRepositoryPattern.ORM;
+using FeedBackRepositoryPattern.DTO;
+using FeedBackRepositoryPattern.Repository;
 
 namespace FeedBackRepositoryPattern.Repository
 {
@@ -48,15 +54,31 @@ namespace FeedBackRepositoryPattern.Repository
 
 
 
-
-        public dynamic dondur(int ProjeID){
-            return (from a in DataContex.Programmers
+        
+        public dynamic GetAndSend(int ProjeID){
+            var x= (from a in DataContex.Programmers
                 from b in a.Projects
                 where b.ProjectID == ProjeID
                 select new
                 {
                     a.ProgrammerEmail
                 }).ToList();
+            foreach (var programmerEmailAdress in x)
+            {
+                SmtpClient client = new SmtpClient();
+                client.Port = 587;
+                client.Host = "smtp.live.com";
+                client.EnableSsl = true;
+                client.Timeout = 50000;
+                client.Credentials = new NetworkCredential("rdcpartner@outlook.com", "FeedBackRepositoryPattern");
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("rdcpartner@outlook.com", "rdcpartner@outlook.com");
+                string result = programmerEmailAdress.ProgrammerEmail.ToString(); //a.programmerEmail <--
+                mail.To.Add(result);
+                mail.Subject = "demo";
+                //client.Send(mail);
+            }
+            return null;
         }
     }
 }

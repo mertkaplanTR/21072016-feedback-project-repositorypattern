@@ -42,10 +42,9 @@ namespace FeedBackRepositoryPattern.Service
 
         public dynamic SendSelectedProjectID(int ProjectID)
         {
-            return _ReportRepository.dondur(ProjectID);
+            return _ReportRepository.GetAndSend(ProjectID);
+
         }
-
-
 
     }
 
