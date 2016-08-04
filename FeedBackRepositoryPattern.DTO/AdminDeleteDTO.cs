@@ -8,12 +8,12 @@ namespace FeedBackRepositoryPattern.DTO
     public class AdminDeleteDTO
     {
         public int UserID { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string EmailAddress { get; set; }
-        public bool isActive { get; set; }
-        public int AdminRole { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        //public string Username { get; set; }
+        //public string Password { get; set; }
+        //public string EmailAddress { get; set; }
+        //public bool isActive { get; set; }
+        //public int AdminRole { get; set; }
+        //public DateTime CreatedDate { get; set; }
+        //public DateTime ModifiedDate { get; set; }
     }
 }

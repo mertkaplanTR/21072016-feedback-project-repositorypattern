@@ -8,7 +8,7 @@ using FeedBackRepositoryPattern.Repository;
 
 namespace FeedBackRepositoryPattern.Service
 {
-    public class AdminService
+    public class AdminService 
     {
         AdminRepository datacontex = new AdminRepository();
 
@@ -64,10 +64,8 @@ namespace FeedBackRepositoryPattern.Service
         public void DeleteAdminServiceFunction(AdminDeleteDTO entity)
         {
             //repository'e gönderilecek olan parametre
-            Admin admin = new Admin
-            {
-                UserID = entity.UserID
-            };
+            var admin = datacontex.GetAdminFunction(entity.UserID);
+
             datacontex.DeleteSomething(admin);
         }
 
