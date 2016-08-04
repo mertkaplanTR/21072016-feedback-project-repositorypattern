@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminAddDTO.cs" />
+    <Compile Include="AdminCheckDTO.cs" />
     <Compile Include="AdminDeleteDTO.cs" />
     <Compile Include="AdminDropDownListDTO.cs" />
     <Compile Include="AdminListDTO.cs" />

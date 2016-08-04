@@ -9,7 +9,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hata Bildirim Giriş ve Kayıt Sayfası</title>
-
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -41,34 +40,39 @@
                                <div class="col-sm-8 col-sm-offset-2 text">
                                    <h1><strong>Proje Atama</strong> </br><%--&amp;--%>Proje Değiştirme Sayfası</h1>
                                </div>
-                                <asp:GridView ID="grdProgrammersProjects" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed"></asp:GridView>
+                                <asp:GridView ID="grdProgrammersProjects" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                    <EditRowStyle BackColor="#999999" />
+                                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                                </asp:GridView>
                              </div>
                           </div>
                         </div>
              <div class="col-sm-6">
                     <div class="row">
                         <div class="form-group">
-                            <h3><strong>Programmer Seçiniz</strong><br />
-                           <asp:DropDownList ID="ddlProgammers" runat="server" CssClass="btn btn-primary dropdown-toggle" AppendDataBoundItems="true"></asp:DropDownList>
+                            <h3><strong>Programmer Seçiniz<br /><asp:DropDownList ID="ddlProgammers" runat="server" CssClass="btn btn-primary dropdown-toggle" AppendDataBoundItems="true"></asp:DropDownList>
 				        </div>
                     </div>
               </div>
-              
                       <div class="col-sm-6">
                     <div class="row">
                         <div class="form-group">
-
-				           
                             <h3><strong>Proje Seçiniz</strong><br />
                            <asp:DropDownList ID="ddlProjects" runat="server" CssClass="btn btn-primary dropdown-toggle" AppendDataBoundItems="true"></asp:DropDownList>
 				        </div>
                         </br>
-                       
                         <asp:Button ID="btnSaveProgrammerToProject" runat="server" CssClass="btn btn-primary" Text="Kaydet" OnClick="btnSaveProgrammerToProject_Click"/>
                     </div>
               </div>
-         
-         
          </div>
 
            <!-- Javascript -->

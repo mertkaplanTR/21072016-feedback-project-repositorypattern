@@ -75,7 +75,7 @@
 				                        	<label class="sr-only" for="form-password">Password</label>
                                             <asp:TextBox ID="txtPassword" runat="server"  placeholder="Password" class="form-password form-control" type="password" required></asp:TextBox>
 				                        </div>
-                                        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary"  />
+                                        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click"  />
 				                        <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
 				                    </form>
 			                    </div>

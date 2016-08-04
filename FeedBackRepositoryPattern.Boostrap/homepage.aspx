@@ -36,19 +36,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">Start Bootstrap</a>
+                <a class="navbar-brand topnav" href="#">aaaaa</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">About</a>
+                       <%-- <a href="#about">About</a>--%>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <%--<a href="#services">Services</a>--%>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                       <%-- <a href="#contact">Contact</a>--%>
                     </li>
                 </ul>
             </div>
@@ -72,10 +72,10 @@
                                 <a href="login.aspx" class="btn btn-default btn-lg"><span class="network-name">Kayıt Ol</span></a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-default btn-lg"> <span class="network-name">Projeni Bul</span></a>
+                                <a href="login.aspx" class="btn btn-default btn-lg"> <span class="network-name">Projeni Bul</span></a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-default btn-lg"> <span class="network-name">Hatanı Bildir</span></a>
+                                <a href="login.aspx" class="btn btn-default btn-lg"> <span class="network-name">Hatanı Bildir</span></a>
                             </li>
                         </ul>
                     </div>

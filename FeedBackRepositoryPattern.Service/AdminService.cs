@@ -23,9 +23,27 @@ namespace FeedBackRepositoryPattern.Service
                     EmailAddress = x.EmailAddress,
                     AdminRole = Convert.ToInt32(x.AdminRole), //converted because of in db isActive can be null.
                     isActive = Convert.ToBoolean(x.isActive), // <-- that should be true or false
-                    CreatedDate = Convert.ToDateTime(x.CreatedDate), 
+                    CreatedDate = Convert.ToDateTime(x.CreatedDate),
                     ModifiedDate = Convert.ToDateTime(x.ModifiedDate),
                 }).ToList();
+        }
+
+        public bool AdminCheckFunction(AdminCheckDTO entity)
+        {
+            Admin admin = new Admin
+            {
+                Username = entity.Username,
+                Password = entity.Password,
+            };
+            datacontex.CheckAdminFunction(admin);
+            if (datacontex.CheckAdminFunction(admin) == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public void AddAdminServiceFunction(AdminAddDTO entity)
@@ -33,12 +51,12 @@ namespace FeedBackRepositoryPattern.Service
             Admin admin = new Admin
             {
                 Username = entity.Username,
-                Password=entity.Password,
-                EmailAddress=entity.EmailAddress,
-                isActive=entity.isActive,
+                Password = entity.Password,
+                EmailAddress = entity.EmailAddress,
+                isActive = entity.isActive,
                 AdminRole = entity.AdminRole,
-                CreatedDate=entity.CreatedDate,
-                ModifiedDate=entity.ModifiedDate
+                CreatedDate = entity.CreatedDate,
+                ModifiedDate = entity.ModifiedDate
             };
             datacontex.AddSomething(admin);
         }
@@ -46,20 +64,24 @@ namespace FeedBackRepositoryPattern.Service
         public void DeleteAdminServiceFunction(AdminDeleteDTO entity)
         {
             //repository'e gönderilecek olan parametre
-            Admin admin = datacontex.GetAdminFunction(entity.UserID);
+            Admin admin = new Admin
+            {
+                UserID = entity.UserID
+            };
             datacontex.DeleteSomething(admin);
         }
 
         public void UpdateAdminServiceFunction(AdminUpdateDTO entity)
         {
-            Admin admin = datacontex.GetAdminFunction(entity.UserID);
-
-            admin.Username = entity.Username;
-            admin.Password = entity.Password;
-            admin.EmailAddress = entity.EmailAddress;
-            admin.isActive = entity.isActive;
-            admin.AdminRole = entity.AdminRole;
-            admin.ModifiedDate = entity.ModifiedDate;
+            Admin admin = new Admin
+            {
+                Username = entity.Username,
+                Password = entity.Password,
+                EmailAddress = entity.EmailAddress,
+                isActive = entity.isActive,
+                AdminRole = entity.AdminRole,
+                ModifiedDate = entity.ModifiedDate,
+            };
             datacontex.UpdateSomething(admin);
         }
     }

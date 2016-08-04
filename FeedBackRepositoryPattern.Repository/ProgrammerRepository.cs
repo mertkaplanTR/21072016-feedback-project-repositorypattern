@@ -13,7 +13,5 @@ namespace FeedBackRepositoryPattern.Repository
             return DataContex.Set<Programmers>().Where(x => x.ProgrammerID == ProgrammerID).SingleOrDefault();
         }
 
-
-
     }
 }

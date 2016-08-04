@@ -32,7 +32,6 @@ namespace FeedBackRepositoryPattern.Service
                 ).ToList();
         }
 
-
         //public IList<ProgrammerSendMailDTO> GetProgrammerMails(ProgrammerSendMailDTO entity)
         //{
         //    return _ProgrammerRepository.GetList().Select(   // TUM MAILLERI LISTELER ISTENILEN MAILLERI LISTEYENI REPORT SERVICEDE
@@ -44,7 +43,6 @@ namespace FeedBackRepositoryPattern.Service
 
         public void sendMail(ProgrammerSendMailDTO entity)
         {
-
             var x = entity.ProgrammerEmail;
             SmtpClient client = new SmtpClient();
             client.Port = 587;
@@ -57,11 +55,7 @@ namespace FeedBackRepositoryPattern.Service
             mail.To.Add("mertkaplan.tr@gmail.com");
             mail.Subject = "demo";
             client.Send(mail);
-
         }
-
-        
-
     }
 }
 

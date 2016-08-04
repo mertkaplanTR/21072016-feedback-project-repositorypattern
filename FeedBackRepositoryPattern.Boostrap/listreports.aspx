@@ -34,20 +34,14 @@
 <body>
     <form id="form1" runat="server">
     <div class="top-content">
-
                     <div class="inner-bg">
                         <div class="container">
                             <div class="row">
                                <div class="col-sm-8 col-sm-offset-2 text">
                                    <h1><strong>Report Listeleme</strong> </br><%--&amp;--%>Güncelleme Sayfası</h1>
                                </div>
-                                <asp:GridView ID="grdListReport" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="grdListReport_SelectedIndexChanged">
+                                <asp:GridView ID="grdListReport" runat="server" CssClass="table table-striped table-bordered table-hover table-responsive table-condensed" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="grdListReport_SelectedIndexChanged" ShowFooter="True">
                                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                                    <Columns>
-                                        <asp:CommandField ShowEditButton="True" />
-                                        <asp:CommandField ShowSelectButton="True" />
-                                        <asp:CommandField ShowDeleteButton="True" />
-                                    </Columns>
                                     <EditRowStyle BackColor="#999999" />
                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

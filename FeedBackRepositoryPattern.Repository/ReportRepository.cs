@@ -52,9 +52,6 @@ namespace FeedBackRepositoryPattern.Repository
 
         }
 
-
-
-        
         public dynamic GetAndSend(int ProjeID){
             var x= (from a in DataContex.Programmers
                 from b in a.Projects
@@ -73,8 +70,9 @@ namespace FeedBackRepositoryPattern.Repository
                 client.Credentials = new NetworkCredential("rdcpartner@outlook.com", "FeedBackRepositoryPattern");
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("rdcpartner@outlook.com", "rdcpartner@outlook.com");
-                string result = programmerEmailAdress.ProgrammerEmail.ToString(); //a.programmerEmail <--
-                mail.To.Add(result);
+                //string result = programmerEmailAdress.ProgrammerEmail.ToString(); //a.programmerEmail <--
+                //mail.To.Add(result);
+                mail.To.Add(programmerEmailAdress.ProgrammerEmail);
                 mail.Subject = "demo";
                 //client.Send(mail);
             }

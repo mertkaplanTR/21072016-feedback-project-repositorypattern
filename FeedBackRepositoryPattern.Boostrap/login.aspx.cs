@@ -50,5 +50,15 @@ namespace FeedBackRepositoryPattern.Boostrap
             //bu fonksiyon sonucunda null dönse dahi reportrepository incelenirse eğer 
             //foreach yapısı ile tum seçilen projedeki kişilere mail gönderildiği gözlemlenebilir.
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            AdminService _AdminService = new AdminService();
+            AdminCheckDTO _AdminCheckDTO = new AdminCheckDTO();
+            _AdminCheckDTO.Username = txtUsername.Text;
+            _AdminCheckDTO.Password = txtPassword.Text;
+            bool x=_AdminService.AdminCheckFunction(_AdminCheckDTO);
+
+        }
     }
 }

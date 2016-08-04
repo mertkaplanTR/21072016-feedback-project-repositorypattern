@@ -12,5 +12,10 @@ namespace FeedBackRepositoryPattern.Repository
         {
             return DataContex.Set<Admin>().Where(x => x.UserID == userID).SingleOrDefault();
         }
+
+        public Admin CheckAdminFunction(Admin admin)
+        {
+            return DataContex.Set<Admin>().Where(x => x.Username == admin.Username && x.Password == admin.Password).SingleOrDefault();
+        }
     }
 }

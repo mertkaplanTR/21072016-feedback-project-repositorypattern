@@ -20,12 +20,12 @@ namespace FeedBackRepositoryPattern.Boostrap
         {
             ReportService _ReportService = new ReportService();
             grdListReport.DataSource = _ReportService.GetReportList();
+           
             grdListReport.DataBind();
         }
 
         protected void grdListReport_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
         }
     }
 }
