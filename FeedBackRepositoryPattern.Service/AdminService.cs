@@ -10,11 +10,11 @@ namespace FeedBackRepositoryPattern.Service
 {
     public class AdminService 
     {
-        AdminRepository datacontex = new AdminRepository();
+        AdminRepository _AdminRepository = new AdminRepository();
 
         public IList<AdminListDTO> GetAdminList()
         {
-            return datacontex.GetList().Select(
+            return _AdminRepository.GetList().Select(
                 x => new AdminListDTO
                 {
                     UserID = x.UserID,
@@ -32,11 +32,13 @@ namespace FeedBackRepositoryPattern.Service
         {
             Admin admin = new Admin
             {
+                
                 Username = entity.Username,
                 Password = entity.Password,
             };
-            datacontex.CheckAdminFunction(admin);
-            if (datacontex.CheckAdminFunction(admin) == null)
+
+            _AdminRepository.CheckAdminFunction(admin);
+            if (_AdminRepository.CheckAdminFunction(admin) == null)
             {
                 return false;
             }
@@ -58,26 +60,40 @@ namespace FeedBackRepositoryPattern.Service
                 CreatedDate = entity.CreatedDate,
                 ModifiedDate = entity.ModifiedDate
             };
-            datacontex.AddSomething(admin);
+            _AdminRepository.AddSomething(admin);
         }
 
         public void DeleteAdminServiceFunction(AdminDeleteDTO entity)
         {
             //repository'e gönderilecek olan parametre
-            var admin = datacontex.GetAdminFunction(entity.UserID);
-            datacontex.DeleteSomething(admin);
+            var admin = _AdminRepository.GetAdminFunction(entity.UserID);
+            _AdminRepository.DeleteSomething(admin);
         }
-
-
-
 
         public void UpdateAdminServiceFunction(AdminUpdateDTO entity)
         {
-            var request = datacontex.GetAdminFunction(entity.UserID);
+            var request = _AdminRepository.GetAdminFunction(entity.UserID);
             request.Username = entity.Username;
             request.Password = entity.Password;
             request.EmailAddress = entity.EmailAddress;
-            datacontex.UpdateSomething(request);
+            _AdminRepository.UpdateSomething(request);
+        }
+
+        public int SendUserDetailsandGetUserID(AdminCheckDTO entity)
+        {
+            Admin admin = new Admin
+            {
+                Username = entity.Username,
+                Password = entity.Password
+            };
+            var x= _AdminRepository.ReturnTypeFunction(admin);
+            if (x.AdminRole == 1)
+            {
+                return 1;
+            }
+            else
+                return 0;
+           ////////////// 
         }
     }
 }

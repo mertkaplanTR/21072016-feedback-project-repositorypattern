@@ -53,11 +53,21 @@ namespace FeedBackRepositoryPattern.Boostrap
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            
             AdminService _AdminService = new AdminService();
             AdminCheckDTO _AdminCheckDTO = new AdminCheckDTO();
             _AdminCheckDTO.Username = txtUsername.Text;
             _AdminCheckDTO.Password = txtPassword.Text;
+            Session["UserID"] = _AdminService.SendUserDetailsandGetUserID(_AdminCheckDTO);
+            string alinanSession = Session["UserID"].ToString();
+
+
             bool x=_AdminService.AdminCheckFunction(_AdminCheckDTO);
+            if (x == true)
+            { Response.Redirect("adminusers.aspx"); }
+            else { }
+
+            
 
         }
     }

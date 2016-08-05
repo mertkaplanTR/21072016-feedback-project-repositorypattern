@@ -50,7 +50,6 @@ namespace FeedBackRepositoryPattern.Boostrap
             GetList();
         }
 
-
         protected void btnAdminUpdate_Click(object sender, EventArgs e)
         {
             AdminService _AdminService = new AdminService();
