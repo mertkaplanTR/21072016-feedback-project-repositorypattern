@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Net.Mail;
 using System.Net;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using FeedBackRepositoryPattern.ORM;
 
 namespace FeedBackRepositoryPattern.Repository
@@ -47,6 +49,8 @@ namespace FeedBackRepositoryPattern.Repository
 
         public void UpdateSomething(T entity)
         {
+            DataContex.Set<T>().Attach(entity);
+            DataContex.Entry(entity).State = System.Data.EntityState.Modified;
             DataContex.SaveChanges();
             DataContex = new feedbackdatabaseEntities();
         }
