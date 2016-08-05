@@ -49,7 +49,7 @@ namespace FeedBackRepositoryPattern.Repository
 
         public void UpdateSomething(T entity)
         {
-            DataContex.Set<T>().Attach(entity);
+           // DataContex.Set<T>().Attach(entity);
             DataContex.Entry(entity).State = System.Data.EntityState.Modified;
             DataContex.SaveChanges();
             DataContex = new feedbackdatabaseEntities();

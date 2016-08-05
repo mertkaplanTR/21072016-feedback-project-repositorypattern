@@ -39,8 +39,6 @@ namespace FeedBackRepositoryPattern.Boostrap
             txtAdminEmailAddress.Text = row.Cells[4].Text;
         }
 
-
-
         protected void btnAdminAdd_Click(object sender, EventArgs e)
         {
             AdminService _AdminService = new AdminService();
